@@ -1,9 +1,9 @@
 export const PartnerSection = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-20 pb-10">
+    <div className="w-full flex flex-col items-center justify-center gap-20 pb-10 px-10">
       <h1 className="text-5xl font-bold">Find Our Products At</h1>
 
-      <div className="w-3/4 grid grid-cols-5 grid-rows-2 gap-10 items-center  ">
+      <div className="w-3/4 flex flex-col md:grid md:grid-cols-5 md:grid-rows-2 gap-10 items-center  ">
         <div>
           <img src="7eleven.png" alt="" />
         </div>
