@@ -8,7 +8,7 @@ export const HomePage = () => {
     <div className="w-full h-full">
       {/* Hero section */}
       <div className="w-full h-[300px] md:h-[500px] bg-[url(/bgimage.webp)] bg-cover flex items-center px-10 opacity-105">
-        <div className="card card-dash bg-base-100 w-1/3 h-2/3 hidden">
+        <div className="card card-dash bg-base-100 w-1/3 h-2/3 hidden md:flex">
           <div className="card-body">
             <h1>Loved by 1M+ customers</h1>
             <h2 className="card-title text-4xl">
