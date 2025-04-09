@@ -1,6 +1,6 @@
 export const Products = () => {
   return (
-    <div className="w-full h-full flex flex-col md:flex-row gap-5 p-10 bg-secondary">
+    <div className="w-full h-full flex flex-col md:flex-row gap-5 p-10 bg-secondary text-secondary-content">
       <div className="w-full md:w-1/3 flex flex-col gap-5 justify-center">
         <h1 className="text-5xl font-bold">Best Seller</h1>
         <p>

@@ -2,6 +2,8 @@ import Image from "next/image";
 import { CategoryCard } from "../CategoryCard";
 import { PartnerSection } from "../PartnerSection";
 import { Products } from "../Products";
+import { Review } from "../Review";
+import { Mission } from "../Mission";
 
 export const HomePage = () => {
   return (
@@ -59,24 +61,27 @@ export const HomePage = () => {
       </div>
       {/* End of Featured Product */}
       {/* Divider */}
-      <div className="w-full h-60 bg-secondary flex flex-row text-warning-content my-10 px-5">
-        <div className="w-full flex items-center justify-center text-3xl md:text-5xl">
-          <p>
-            Feel <span className="italic text-success-content"> Lucky</span>,
-            Feel Comfy.
+      <div className="w-full h-60 bg-secondary flex flex-row text-warning-content my-10 px-5 gap-5 md:gap-0">
+        <div className="w-full flex items-center justify-center text-2xl md:text-5xl">
+          <p className="tracking-wide font-bold text-center">
+            Quality You{" "}
+            <span className="italic text-accent-content">Trust</span> <br />
+            Prices You <span className="italic text-accent-content">Love</span>
           </p>
         </div>
         <div className="w-full flex items-center md:text-xl">
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ut
-            ad, totam sunt magni assumenda facere ipsa! Repellendus animi
-            eligendi veniam itaque deleniti aspernatur quas?
+            We make everyday essentials that are simple, safe, and designed to
+            fit your lifestyle. Clean living starts with quality you can trust —
+            delivered with a lucky touch.
           </p>
         </div>
       </div>
       {/* End of Divider */}
       <PartnerSection />
       <Products />
+      <Review />
+      <Mission colorMode="dark" />
     </div>
   );
 };
