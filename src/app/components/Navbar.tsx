@@ -41,7 +41,7 @@ export const Navbar = () => {
               <a href="/">HOME</a>
             </li>
             <li>
-              <a>PRODUCTS</a>
+              <a href="/products">PRODUCTS</a>
             </li>
             <li>
               <a href="/about">ABOUT US</a>
@@ -56,7 +56,7 @@ export const Navbar = () => {
             <a href="/">HOME</a>
           </li>
           <li>
-            <a>PRODUCTS</a>
+            <a href="/products">PRODUCTS</a>
           </li>
           <li>
             <a href="/about">ABOUT US</a>
