@@ -1,13 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ProductCard } from "../ProductCard";
-import { productData } from "@/app/ProductData";
+
+interface Product {
+  id: number;
+  category: string;
+  name: string;
+  price: number;
+  imageurl: string;
+}
 
 export const ProductPages = () => {
   const [category, setCategory] = useState("wetwipes");
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const filteredProducts = productData.filter(
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch("/api/get-product");
+        const data = await res.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  const filteredProducts = products.filter(
     (product) => product.category === category
   );
 
@@ -27,34 +52,19 @@ export const ProductPages = () => {
             CATEGORY
           </li>
 
-          <li
-            className="list-row cursor-pointer hover:bg-secondary rounded-none"
-            onClick={() => setCategory("wetwipes")}
-          >
-            <div>Wet Wipes</div>
-          </li>
-          <li
-            className="list-row cursor-pointer hover:bg-secondary rounded-none"
-            onClick={() => setCategory("tissue")}
-          >
-            <div>Tissue</div>
-          </li>
-          <li
-            className="list-row cursor-pointer hover:bg-secondary rounded-none"
-            onClick={() => setCategory("detergent")}
-          >
-            <div>Detergent</div>
-          </li>
-          <li
-            className="list-row cursor-pointer hover:bg-secondary rounded-none"
-            onClick={() => setCategory("homesupplies")}
-          >
-            <div>Home Supplies</div>
-          </li>
+          {Object.keys(categoryLabels).map((key) => (
+            <li
+              key={key}
+              className="list-row cursor-pointer hover:bg-secondary rounded-none"
+              onClick={() => setCategory(key)}
+            >
+              <div>{categoryLabels[key]}</div>
+            </li>
+          ))}
+
           <li className="p-4 tracking-wide bg-error-content text-base-100 text-lg font-extrabold">
             PROMO
           </li>
-
           <li
             className="list-row cursor-pointer hover:bg-secondary rounded-none"
             onClick={() => setCategory("promo1")}
@@ -81,16 +91,21 @@ export const ProductPages = () => {
               {categoryLabels[category] || category}
             </h1>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {filteredProducts.map((product, index) => (
-              <ProductCard
-                key={index}
-                title={product.name}
-                desc={`$${product.price.toFixed(2)}`}
-                imageurl={product.imageurl}
-              />
-            ))}
-          </div>
+
+          {loading ? (
+            <div className="text-center text-lg font-semibold">Loading...</div>
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+              {filteredProducts.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  title={product.name}
+                  desc={`$${product.price.toFixed(2)}`}
+                  imageurl={product.imageurl}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
