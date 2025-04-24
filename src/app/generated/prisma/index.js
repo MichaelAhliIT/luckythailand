@@ -84,6 +84,9 @@ Prisma.NullTypes = {
  * Enums
  */
 exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
+  ReadUncommitted: 'ReadUncommitted',
+  ReadCommitted: 'ReadCommitted',
+  RepeatableRead: 'RepeatableRead',
   Serializable: 'Serializable'
 });
 
@@ -98,6 +101,11 @@ exports.Prisma.ProductScalarFieldEnum = {
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
+};
+
+exports.Prisma.QueryMode = {
+  default: 'default',
+  insensitive: 'insensitive'
 };
 
 
@@ -142,18 +150,18 @@ const config = {
   "datasourceNames": [
     "db"
   ],
-  "activeProvider": "sqlite",
+  "activeProvider": "postgresql",
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "file:./dev.db"
+        "value": "prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZDk2NzZkMDYtYTEyOC00ZDkwLWJmZjktNGNkYTE2NzNhMWM0IiwidGVuYW50X2lkIjoiNTVlZDQ0N2E2ZTMwODY2MTU4YTkxZmYzMGI2NDUyMWVmZDY0YzAzN2I0MzMzYmM2ZDg1Y2VhMjQ0YTlkNGIxMyIsImludGVybmFsX3NlY3JldCI6ImE5Yzc0MDRmLTVhNjMtNGYzZi1iMzU2LWVmOWMyYzFmNGUzMCJ9.nO3YMGEnVfpV7z_gGF79v-bG-DOOtvnjV8NaUNs2cQ8"
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/app/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"sqlite\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Product {\n  id       Int    @id @default(autoincrement())\n  category String\n  name     String\n  price    Float\n  imageurl String\n}\n",
-  "inlineSchemaHash": "3b71b7a2d273c906708f8eab8c47f2571c7159a133ec4796e64f5f47e3d2c4d6",
-  "copyEngine": true
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/app/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Product {\n  id       Int    @id @default(autoincrement())\n  category String\n  name     String\n  price    Float\n  imageurl String\n}\n",
+  "inlineSchemaHash": "35a1dd0db58127d347da05a1a1ffd6839336cfd0a873ff021079f4b5504f30ae",
+  "copyEngine": false
 }
 
 const fs = require('fs')
@@ -190,9 +198,3 @@ const PrismaClient = getPrismaClient(config)
 exports.PrismaClient = PrismaClient
 Object.assign(exports, Prisma)
 
-// file annotations for bundling tools to include these files
-path.join(__dirname, "query_engine-windows.dll.node");
-path.join(process.cwd(), "src/app/generated/prisma/query_engine-windows.dll.node")
-// file annotations for bundling tools to include these files
-path.join(__dirname, "schema.prisma");
-path.join(process.cwd(), "src/app/generated/prisma/schema.prisma")
