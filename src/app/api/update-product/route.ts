@@ -1,20 +1,21 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../../../lib/prisma";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function PUT(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "PUT") {
-    const { id, ...data } = req.body;
+export async function PUT(req: NextRequest) {
+  try {
+    const body = await req.json();
+    const { id, ...data } = body;
 
-    try {
-      const updatedProduct = await prisma.product.update({
-        where: { id: Number(id) },
-        data,
-      });
-      res.status(200).json(updatedProduct);
-    } catch (err) {
-      res.status(500).json({ error: "Failed to update product" });
-    }
-  } else {
-    res.status(405).json({ error: "Method not allowed" });
+    const updatedProduct = await prisma.product.update({
+      where: { id: Number(id) },
+      data,
+    });
+
+    return NextResponse.json(updatedProduct, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Failed to update product" },
+      { status: 500 }
+    );
   }
 }
