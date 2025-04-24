@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 export const Navbar = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
@@ -50,8 +51,8 @@ export const Navbar = () => {
         </div>
         <a className="btn btn-ghost text-xl font-bold">LUCKY</a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-lg">
+      <div className="navbar-end">
+        <ul className="menu menu-horizontal px-1 text-lg gap-5 font-semibold hidden lg:flex">
           <li>
             <a href="/">HOME</a>
           </li>
@@ -62,10 +63,13 @@ export const Navbar = () => {
             <a href="/about">ABOUT US</a>
           </li>
         </ul>
-      </div>
-      <div className="navbar-end">
         <div className="dropdown dropdown-end">
-          <div tabIndex={0} role="button" className="btn m-1" ref={dropdownRef}>
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-secondary m-1"
+            ref={dropdownRef}
+          >
             {selectedLanguage}
           </div>
           <ul
@@ -73,10 +77,15 @@ export const Navbar = () => {
             className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm"
           >
             <li>
-              <a onClick={() => handleSelect("English")}>English</a>
+              <a onClick={() => handleSelect("English")}>
+                <span className="fi fi-us" />
+                English
+              </a>
             </li>
             <li>
-              <a onClick={() => handleSelect("Thailand")}>Thailand</a>
+              <a onClick={() => handleSelect("Thailand")}>
+                <span className="fi fi-th" /> Thailand
+              </a>
             </li>
           </ul>
         </div>
