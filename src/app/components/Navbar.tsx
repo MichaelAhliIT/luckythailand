@@ -85,8 +85,8 @@ export const Navbar = () => {
               </a>
             </li>
             <li>
-              <a onClick={() => handleSelect("Thailand")}>
-                <span className="fi fi-th" /> Thailand
+              <a onClick={() => handleSelect("Thai")}>
+                <span className="fi fi-th" /> Thai
               </a>
             </li>
           </ul>
