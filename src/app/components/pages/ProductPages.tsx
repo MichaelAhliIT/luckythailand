@@ -46,7 +46,7 @@ export const ProductPages = () => {
   return (
     <div className="w-full min-h-screen flex pt-14">
       {/* Category */}
-      <div className="flex w-full justify-center py-10 px-10 gap-10">
+      <div className="flex w-full justify-center py-10 px-2 md:px-10 gap-10">
         <ul className="list bg-base-100 md:min-w-1/7 hidden md:flex shadow-xl">
           <li className="p-4 tracking-wide bg-error-content text-base-100 text-lg font-extrabold  ">
             CATEGORY

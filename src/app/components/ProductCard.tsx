@@ -12,12 +12,11 @@ export const ProductCard = ({ title, desc, imageurl }: CategoryCardProps) => {
       </figure>
 
       <div className="card-body flex-grow">
-        <h2 className="card-title text-xl">{title}</h2>
+        <h2 className="card-title text-sm md:text-xl">{title}</h2>
       </div>
 
       <div className="card-actions mt-auto p-4">
-        <p className="font-bold">{desc}</p>
-        <button className="btn btn-secondary w-full rounded-md">Buy</button>
+        <p className="font-bold text-[#EF6795] md:text-xl">{desc}</p>
       </div>
     </div>
   );
