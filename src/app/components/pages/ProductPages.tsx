@@ -44,11 +44,11 @@ export const ProductPages = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex">
+    <div className="w-full min-h-screen flex pt-14">
       {/* Category */}
-      <div className="flex w-full justify-center py-10 px-10 gap-10 bg-base-300">
-        <ul className="list bg-base-100 md:min-w-1/7 hidden md:flex">
-          <li className="p-4 tracking-wide bg-error-content text-base-100 text-lg font-extrabold">
+      <div className="flex w-full justify-center py-10 px-10 gap-10">
+        <ul className="list bg-base-100 md:min-w-1/7 hidden md:flex shadow-xl">
+          <li className="p-4 tracking-wide bg-error-content text-base-100 text-lg font-extrabold  ">
             CATEGORY
           </li>
 
@@ -86,10 +86,29 @@ export const ProductPages = () => {
         </ul>
 
         <div className="flex flex-col gap-10 w-full">
-          <div className="bg-white">
-            <h1 className="text-3xl p-3 font-bold capitalize">
+          <div className="bg-white flex items-center">
+            <h1 className="text-3xl p-3 font-bold capitalize flex-1">
               {categoryLabels[category] || category}
             </h1>
+            <label className="input mx-5">
+              <svg
+                className="h-[1em] opacity-50"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
+                  strokeWidth="2.5"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </g>
+              </svg>
+              <input type="search" required placeholder="Search" />
+            </label>
           </div>
 
           {loading ? (

@@ -14,7 +14,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 shadow-sm text-secondary-content	">
+    <div className="navbar bg-white shadow-sm text-secondary-content fixed z-20">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,8 +51,8 @@ export const Navbar = () => {
         </div>
         <a className="btn btn-ghost text-xl font-bold">LUCKY</a>
       </div>
-      <div className="navbar-end">
-        <ul className="menu menu-horizontal px-1 text-lg gap-5 font-semibold hidden lg:flex">
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1 text-lg gap-5 font-semibold ">
           <li>
             <a href="/">HOME</a>
           </li>
@@ -63,6 +63,8 @@ export const Navbar = () => {
             <a href="/about">ABOUT US</a>
           </li>
         </ul>
+      </div>
+      <div className="navbar-end">
         <div className="dropdown dropdown-end">
           <div
             tabIndex={0}

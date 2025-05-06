@@ -6,14 +6,15 @@ export const AboutPage = () => {
   return (
     <div>
       {/* First Hero */}
-      <div className="w-full h-full md:min-h-screen flex flex-col md:flex-row">
-        <div className="w-full flex items-center bg-amber-100">
+      <div className="w-full h-full md:min-h-screen flex flex-col md:flex-row pt-14">
+        <div className="w-full flex items-center bg-slate-700 text-white">
           <div className="flex flex-col justify-center w-full md:w-3/5 gap-5 mx-10 my-10 md:my-0">
-            <h1 className="text-5xl font-extrabold">We are Lucky</h1>
+            <h1 className="text-5xl font-extrabold">
+              We are <span className="text-[#EF6795]">Lucky</span>
+            </h1>
             <p className="text-lg">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-              culpa distinctio consequuntur dolore ratione voluptates accusamus
-              esse quidem porro qui.
+              We are lucky to be part of your everyday routine—bringing you
+              safe, effective, and trusted care for a cleaner, healthier home.
             </p>
           </div>
         </div>

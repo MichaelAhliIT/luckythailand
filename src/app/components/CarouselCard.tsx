@@ -51,7 +51,7 @@ export const CarouselCard = () => {
   return (
     <div className="relative w-full max-w-6xl mx-auto px-4 py-10">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-5xl font-bold">Shop Our Shopee</h2>
+        <h2 className="text-5xl">Shop Our Shopee</h2>
       </div>
 
       <div
@@ -73,7 +73,7 @@ export const CarouselCard = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="min-w-[250px] w-60 h-96 flex-shrink-0 bg-white hover:bg-amber-50 rounded-xl shadow p-4 snap-start border border-black"
+            className="min-w-[250px] w-60 h-full flex-shrink-0 bg-white hover:bg-amber-50 rounded-xl shadow p-4 snap-start border border-black"
           >
             <img
               src={card.image}

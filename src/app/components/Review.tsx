@@ -1,9 +1,7 @@
 export const Review = () => {
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center p-10">
-      <h1 className="text-5xl font-bold text-center">
-        What Our Customers Are Saying
-      </h1>
+      <h1 className="text-5xl md:text-center">What Our Customers Are Saying</h1>
       <div className="flex flex-col md:flex-row py-15">
         <div className="w-full flex justify-center">
           <div className="w-3/4 flex flex-col gap-5">

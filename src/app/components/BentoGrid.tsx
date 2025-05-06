@@ -14,51 +14,51 @@ export const BentoGrid = () => {
                   Our Partner
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Assumenda, recusandae? Laboriosam modi enim magnam dolore,
-                  eveniet, fugit eum rerum culpa natus ipsa atque exercitationem
-                  amet. Molestiae eos deserunt harum quo.
+                  We proudly collaborate with trusted partners who share our
+                  commitment to quality and innovation. Together, we create
+                  greater value, drive growth, and deliver better solutions for
+                  our customers
                 </p>
               </div>
               <div className="grid grid-cols-2 grid-rows-3 gap-4 items-center justify-items-center my-10 md:my-0">
                 <div>
                   <img
-                    src="/7eleven.png"
+                    src="/jiffy.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
                 </div>
                 <div>
                   <img
-                    src="/lotus.jpeg"
+                    src="/pt.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
                 </div>
                 <div className="row-start-2">
                   <img
-                    src="shopee.png"
+                    src="watson.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
                 </div>
                 <div className="row-start-2">
                   <img
-                    src="familymart.png"
+                    src="makro.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
                 </div>
                 <div className="row-start-3">
                   <img
-                    src="shopee.png"
+                    src="cjexpress.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
                 </div>
                 <div className="row-start-3">
                   <img
-                    src="/7eleven.png"
+                    src="/lawson.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
@@ -76,8 +76,9 @@ export const BentoGrid = () => {
                   Quality You Can Trust
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit
-                  maiores impedit.
+                  Our daily care products, from detergent to tissues, are made
+                  with safe, reliable ingredients—delivering quality you can
+                  trust for your everyday needs
                 </p>
               </div>
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
@@ -100,8 +101,7 @@ export const BentoGrid = () => {
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   We believe in products that are gentle for your family and
                   kind to the environment. That’s why we choose safe materials,
-                  minimal packaging, and sustainable practices wherever
-                  possible.
+                  minimal packaging, and sustainable practices wherever possible
                 </p>
               </div>
               <div className="@container flex flex-1 items-center justify-center max-lg:py-6 lg:pb-2">
@@ -122,8 +122,8 @@ export const BentoGrid = () => {
                   Main Product Lines
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Sit quis amet rutrum tellus ullamcorper ultricies libero dolor
-                  eget sem sodales gravida.
+                  Lucky Care and Lucky Clean are here to help with you daily
+                  needs
                 </p>
               </div>
               <div className="flex flex-col gap-3 p-10">
