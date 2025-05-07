@@ -69,7 +69,7 @@ export const Navbar = () => {
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-secondary m-1"
+            className="btn bg-slate-700 text-secondary m-1"
             ref={dropdownRef}
           >
             {selectedLanguage}

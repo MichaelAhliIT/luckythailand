@@ -7,9 +7,22 @@ import { BestSeller } from "../BestSeller";
 import { Review } from "../Review";
 import { Mission } from "../Mission";
 import { useRouter } from "next/navigation";
+import * as motion from "motion/react-client";
+import { useEffect, useState } from "react";
 
 export const HomePage = () => {
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768); // Mobile is <768px (Tailwind `md`)
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+  const viewportAmount = isMobile ? 0.3 : 0.5;
   return (
     <div className="w-full h-full pt-14">
       {/* Hero section */}
@@ -26,7 +39,7 @@ export const HomePage = () => {
             </p>
             <div className="card-actions">
               <button
-                className="btn btn-secondary w-full"
+                className="btn bg-slate-700 text-secondary w-full"
                 onClick={() => router.push("/products")}
               >
                 Buy Now
@@ -57,7 +70,17 @@ export const HomePage = () => {
       </div>
       {/* End of Hero Section */}
       {/* Featured Product */}
-      <div className="flex flex-col justify-center gap-5 px-10 py-20">
+      <motion.div
+        className="flex flex-col justify-center gap-5 px-10 py-20"
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: {
+            duration: 1,
+          },
+        }}
+        viewport={{ once: true, amount: viewportAmount }}
+      >
         <h1 className="text-5xl">Featured Product</h1>
         <div className="flex flex-col md:flex-row gap-10">
           <CategoryCard
@@ -71,7 +94,7 @@ export const HomePage = () => {
             imageurl="/care.webp"
           />
         </div>
-      </div>
+      </motion.div>
       {/* End of Featured Product */}
       {/* Divider */}
       <div className="w-full h-60 bg-slate-700 flex flex-col md:flex-row justify-center md:justify-start text-base-100 mb-10 px-5 gap-5 md:gap-0">
