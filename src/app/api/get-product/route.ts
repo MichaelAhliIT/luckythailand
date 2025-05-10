@@ -1,7 +1,7 @@
 import prisma from "../../../../lib/prisma";
 import { NextResponse } from "next/server";
 
-export const runtime = "nodejs"; // Required to use Prisma with App Router
+export const runtime = "nodejs";
 
 export async function GET() {
   try {

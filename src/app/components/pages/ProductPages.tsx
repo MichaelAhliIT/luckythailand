@@ -107,12 +107,14 @@ export const ProductPages = () => {
                   <path d="m21 21-4.3-4.3"></path>
                 </g>
               </svg>
-              <input type="search" required placeholder="Search" />
+              <input type="search" required placeholder="Search Product" />
             </label>
           </div>
 
           {loading ? (
-            <div className="text-center text-lg font-semibold">Loading...</div>
+            <div className="text-center text-lg font-semibold">
+              <span className="loading loading-spinner loading-xl"></span>
+            </div>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
               {filteredProducts.map((product) => (
