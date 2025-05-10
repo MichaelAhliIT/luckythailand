@@ -97,7 +97,7 @@ export const HomePage = () => {
       </motion.div>
       {/* End of Featured Product */}
       {/* Divider */}
-      <div className="w-full h-60 bg-slate-700 flex flex-col md:flex-row justify-center md:justify-start text-base-100 mb-10 px-5 gap-5 md:gap-0">
+      <div className="w-full h-60 bg-slate-200 flex flex-col md:flex-row justify-center md:justify-start text-black mb-10 px-5 gap-5 md:gap-0">
         <div className="w-full flex items-center justify-center text-2xl md:text-5xl">
           <p className="tracking-wide font-bold text-center">
             Quality You <span className="italic text-[#00B7F0]">Trust</span>{" "}
