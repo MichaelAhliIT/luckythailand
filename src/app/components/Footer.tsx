@@ -3,10 +3,10 @@ export const Footer = () => {
     <footer className="footer sm:footer-horizontal text-black p-10 bg-slate-100">
       <nav>
         <h6 className="footer-title">Products</h6>
-        <a className="link link-hover">Product 1</a>
-        <a className="link link-hover">Product 2</a>
-        <a className="link link-hover">Product 3</a>
-        <a className="link link-hover">Product 4</a>
+        <a className="link link-hover">Wet Wipes</a>
+        <a className="link link-hover">Tissue</a>
+        <a className="link link-hover">Detergent</a>
+        <a className="link link-hover">Home Supplies</a>
       </nav>
       <nav>
         <h6 className="footer-title">Company</h6>

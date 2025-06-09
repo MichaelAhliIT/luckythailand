@@ -73,7 +73,7 @@ export const CarouselCard = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="min-w-[250px] w-60 h-full flex-shrink-0 bg-white hover:bg-amber-50 rounded-xl shadow p-4 snap-start border border-black"
+            className="min-w-[250px] w-60 h-full flex-shrink-0 bg-white hover:bg-pink-50 rounded-xl shadow p-4 snap-start border border-black"
           >
             <img
               src={card.image}
