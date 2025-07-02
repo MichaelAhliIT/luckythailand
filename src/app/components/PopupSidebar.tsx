@@ -9,7 +9,7 @@ export default function PopupSidebar() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative flex md:hidden">
       {/* Hamburger Menu Button */}
       <button
         onClick={toggleSidebar}
@@ -22,70 +22,90 @@ export default function PopupSidebar() {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-20"
+          className="fixed inset-0 bg-black/40 bg-opacity-50 z-20"
           onClick={toggleSidebar}
         />
       )}
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-800 shadow-lg transform transition-transform duration-300 ease-in-out z-30 ${
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-30 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="p-5">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-xl font-bold text-gray-800 dark:text-white">
-              Products
-            </h2>
+            <h2 className="text-xl font-bold text-gray-800">Products</h2>
             <button
               onClick={toggleSidebar}
               className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none"
             >
-              <X size={24} className="text-gray-800 dark:text-white" />
+              <X size={24} className="text-gray-800" />
             </button>
           </div>
 
           <nav>
             <ul className="space-y-2">
+              <li className="bg-[#BF0004] p-3">
+                <h1 className="text-white">Lucky Clean</h1>
+              </li>
               <li>
                 <a
                   href="#"
-                  className="block p-2 rounded-md text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
                 >
-                  Home
+                  Detergent
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="block p-2 rounded-md text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
                 >
-                  About
+                  Dishwashing Liquid
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="block p-2 rounded-md text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
                 >
-                  Services
+                  Floor Liquid
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="block p-2 rounded-md text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
                 >
-                  Portfolio
+                  Garbage Bag
+                </a>
+              </li>
+              <li className="bg-[#BF0004] p-3">
+                <h1 className="text-white">Lucky Care</h1>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
+                >
+                  Tissue
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="block p-2 rounded-md text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
                 >
-                  Contact
+                  Softener
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
+                >
+                  Cotton
                 </a>
               </li>
             </ul>

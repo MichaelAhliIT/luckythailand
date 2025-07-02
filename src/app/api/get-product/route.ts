@@ -5,7 +5,11 @@ export const runtime = "nodejs";
 
 export async function GET() {
   try {
-    const products = await prisma.product.findMany();
+    const products = await prisma.product.findMany({
+      orderBy: {
+        imageurl: "asc",
+      },
+    });
     return NextResponse.json(products, { status: 200 });
   } catch (error: any) {
     console.error("Failed to fetch products:", error);

@@ -145,12 +145,11 @@ export const ProductPages = () => {
               <span className="loading loading-spinner loading-xl"></span>
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {filteredProducts.map((product) => (
                 <ProductCard
                   key={product.id}
                   title={product.name}
-                  desc={`$${product.price.toFixed(2)}`}
                   imageurl={product.imageurl}
                 />
               ))}

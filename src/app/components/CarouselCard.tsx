@@ -51,7 +51,7 @@ export const CarouselCard = () => {
   return (
     <div className="relative w-full max-w-6xl mx-auto px-4 py-10">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-5xl">Shop Our Shopee</h2>
+        <h2 className="text-3xl">Shop Our Shopee</h2>
       </div>
 
       <div

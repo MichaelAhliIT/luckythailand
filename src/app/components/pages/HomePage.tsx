@@ -81,7 +81,7 @@ export const HomePage = () => {
         }}
         viewport={{ once: true, amount: viewportAmount }}
       >
-        <h1 className="text-5xl">Featured Product</h1>
+        <h1 className="text-3xl font-bold">Featured Product</h1>
         <div className="flex flex-col md:flex-row gap-10">
           <CategoryCard
             title="Lucky Clean"

@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { Menu } from "lucide-react";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
@@ -26,13 +27,13 @@ export const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-lg"
           >
             <li>
-              <a href="/">HOME</a>
+              <Link href="/">HOME</Link>
             </li>
             <li>
-              <a href="/products">PRODUCTS</a>
+              <Link href="/products">PRODUCTS</Link>
             </li>
             <li>
-              <a href="/about">ABOUT US</a>
+              <Link href="/about">ABOUT US</Link>
             </li>
           </ul>
         </div>
@@ -41,13 +42,13 @@ export const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-lg gap-5 font-semibold ">
           <li>
-            <a href="/">HOME</a>
+            <Link href="/">HOME</Link>
           </li>
           <li>
-            <a href="/products">PRODUCTS</a>
+            <Link href="/products">PRODUCTS</Link>
           </li>
           <li>
-            <a href="/about">ABOUT US</a>
+            <Link href="/about">ABOUT US</Link>
           </li>
         </ul>
       </div>
