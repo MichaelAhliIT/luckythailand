@@ -26,7 +26,31 @@ export const HomePage = () => {
   return (
     <div className="w-full h-full pt-14">
       {/* Hero section */}
-      <div className="w-full h-[300px] md:h-[600px] bg-[url(/heroImage.jpg)] bg-cover flex items-center px-10 opacity-105">
+      <div className="w-full h-[calc(100vh-10vh)] flex flex-col-reverse md:flex-row md:mt-10">
+        <div className="w-full md:w-2/5 flex flex-col justify-center p-10 md:pl-28">
+          <div className="flex flex-col gap-5">
+            <h1 className="text-6xl font-bold text-red-700">Lucky Thailand</h1>
+            <p className="w-full md:w-3/4">
+              From household essentials to lifestyle must-haves, we bring
+              everything to your doorstep. Shop smarter, live better.
+            </p>
+          </div>
+          <button
+            className="btn bg-slate-700 text-lg text-secondary w-3/4 md:w-1/3 mt-5 p-6"
+            onClick={() => router.push("/products")}
+          >
+            Shop Now
+          </button>
+        </div>
+        <div className="w-full md:w-3/5 md:p-10 flex items-center justify-center">
+          <img
+            src="/luckyproducts.png"
+            alt=""
+            className="w-full object-cover aspect-auto"
+          />
+        </div>
+      </div>
+      {/* <div className="w-full h-[300px] md:h-[600px] bg-[url(/heroImage.jpg)] bg-cover flex items-center px-10 opacity-105">
         <div className="card card-dash bg-base-100 w-1/3 h-2/3 hidden md:flex">
           <div className="card-body">
             <h1>Loved by 1M+ customers</h1>
@@ -38,12 +62,7 @@ export const HomePage = () => {
               everything to your doorstep. Shop smarter, live better.
             </p>
             <div className="card-actions">
-              <button
-                className="btn bg-slate-700 text-secondary w-full"
-                onClick={() => router.push("/products")}
-              >
-                Buy Now
-              </button>
+              
             </div>
           </div>
         </div>
@@ -67,7 +86,7 @@ export const HomePage = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* End of Hero Section */}
       {/* Featured Product */}
       <motion.div
