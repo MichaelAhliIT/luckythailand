@@ -20,5 +20,6 @@ model Product {
   size String?
   quantity Int?
   volume Int?
+  dimensions String?
   unit String?
 }

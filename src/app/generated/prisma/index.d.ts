@@ -904,6 +904,7 @@ export namespace Prisma {
     size: string | null
     quantity: number | null
     volume: number | null
+    dimensions: string | null
     unit: string | null
   }
 
@@ -916,6 +917,7 @@ export namespace Prisma {
     size: string | null
     quantity: number | null
     volume: number | null
+    dimensions: string | null
     unit: string | null
   }
 
@@ -928,6 +930,7 @@ export namespace Prisma {
     size: number
     quantity: number
     volume: number
+    dimensions: number
     unit: number
     _all: number
   }
@@ -956,6 +959,7 @@ export namespace Prisma {
     size?: true
     quantity?: true
     volume?: true
+    dimensions?: true
     unit?: true
   }
 
@@ -968,6 +972,7 @@ export namespace Prisma {
     size?: true
     quantity?: true
     volume?: true
+    dimensions?: true
     unit?: true
   }
 
@@ -980,6 +985,7 @@ export namespace Prisma {
     size?: true
     quantity?: true
     volume?: true
+    dimensions?: true
     unit?: true
     _all?: true
   }
@@ -1079,6 +1085,7 @@ export namespace Prisma {
     size: string | null
     quantity: number | null
     volume: number | null
+    dimensions: string | null
     unit: string | null
     _count: ProductCountAggregateOutputType | null
     _avg: ProductAvgAggregateOutputType | null
@@ -1110,6 +1117,7 @@ export namespace Prisma {
     size?: boolean
     quantity?: boolean
     volume?: boolean
+    dimensions?: boolean
     unit?: boolean
   }, ExtArgs["result"]["product"]>
 
@@ -1122,6 +1130,7 @@ export namespace Prisma {
     size?: boolean
     quantity?: boolean
     volume?: boolean
+    dimensions?: boolean
     unit?: boolean
   }, ExtArgs["result"]["product"]>
 
@@ -1134,6 +1143,7 @@ export namespace Prisma {
     size?: boolean
     quantity?: boolean
     volume?: boolean
+    dimensions?: boolean
     unit?: boolean
   }, ExtArgs["result"]["product"]>
 
@@ -1146,10 +1156,11 @@ export namespace Prisma {
     size?: boolean
     quantity?: boolean
     volume?: boolean
+    dimensions?: boolean
     unit?: boolean
   }
 
-  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "category" | "name" | "price" | "imageurl" | "size" | "quantity" | "volume" | "unit", ExtArgs["result"]["product"]>
+  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "category" | "name" | "price" | "imageurl" | "size" | "quantity" | "volume" | "dimensions" | "unit", ExtArgs["result"]["product"]>
 
   export type $ProductPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Product"
@@ -1163,6 +1174,7 @@ export namespace Prisma {
       size: string | null
       quantity: number | null
       volume: number | null
+      dimensions: string | null
       unit: string | null
     }, ExtArgs["result"]["product"]>
     composites: {}
@@ -1595,6 +1607,7 @@ export namespace Prisma {
     readonly size: FieldRef<"Product", 'String'>
     readonly quantity: FieldRef<"Product", 'Int'>
     readonly volume: FieldRef<"Product", 'Int'>
+    readonly dimensions: FieldRef<"Product", 'String'>
     readonly unit: FieldRef<"Product", 'String'>
   }
     
@@ -1985,6 +1998,7 @@ export namespace Prisma {
     size: 'size',
     quantity: 'quantity',
     volume: 'volume',
+    dimensions: 'dimensions',
     unit: 'unit'
   };
 
@@ -2077,6 +2091,7 @@ export namespace Prisma {
     size?: StringNullableFilter<"Product"> | string | null
     quantity?: IntNullableFilter<"Product"> | number | null
     volume?: IntNullableFilter<"Product"> | number | null
+    dimensions?: StringNullableFilter<"Product"> | string | null
     unit?: StringNullableFilter<"Product"> | string | null
   }
 
@@ -2089,6 +2104,7 @@ export namespace Prisma {
     size?: SortOrderInput | SortOrder
     quantity?: SortOrderInput | SortOrder
     volume?: SortOrderInput | SortOrder
+    dimensions?: SortOrderInput | SortOrder
     unit?: SortOrderInput | SortOrder
   }
 
@@ -2104,6 +2120,7 @@ export namespace Prisma {
     size?: StringNullableFilter<"Product"> | string | null
     quantity?: IntNullableFilter<"Product"> | number | null
     volume?: IntNullableFilter<"Product"> | number | null
+    dimensions?: StringNullableFilter<"Product"> | string | null
     unit?: StringNullableFilter<"Product"> | string | null
   }, "id">
 
@@ -2116,6 +2133,7 @@ export namespace Prisma {
     size?: SortOrderInput | SortOrder
     quantity?: SortOrderInput | SortOrder
     volume?: SortOrderInput | SortOrder
+    dimensions?: SortOrderInput | SortOrder
     unit?: SortOrderInput | SortOrder
     _count?: ProductCountOrderByAggregateInput
     _avg?: ProductAvgOrderByAggregateInput
@@ -2136,6 +2154,7 @@ export namespace Prisma {
     size?: StringNullableWithAggregatesFilter<"Product"> | string | null
     quantity?: IntNullableWithAggregatesFilter<"Product"> | number | null
     volume?: IntNullableWithAggregatesFilter<"Product"> | number | null
+    dimensions?: StringNullableWithAggregatesFilter<"Product"> | string | null
     unit?: StringNullableWithAggregatesFilter<"Product"> | string | null
   }
 
@@ -2147,6 +2166,7 @@ export namespace Prisma {
     size?: string | null
     quantity?: number | null
     volume?: number | null
+    dimensions?: string | null
     unit?: string | null
   }
 
@@ -2159,6 +2179,7 @@ export namespace Prisma {
     size?: string | null
     quantity?: number | null
     volume?: number | null
+    dimensions?: string | null
     unit?: string | null
   }
 
@@ -2170,6 +2191,7 @@ export namespace Prisma {
     size?: NullableStringFieldUpdateOperationsInput | string | null
     quantity?: NullableIntFieldUpdateOperationsInput | number | null
     volume?: NullableIntFieldUpdateOperationsInput | number | null
+    dimensions?: NullableStringFieldUpdateOperationsInput | string | null
     unit?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
@@ -2182,6 +2204,7 @@ export namespace Prisma {
     size?: NullableStringFieldUpdateOperationsInput | string | null
     quantity?: NullableIntFieldUpdateOperationsInput | number | null
     volume?: NullableIntFieldUpdateOperationsInput | number | null
+    dimensions?: NullableStringFieldUpdateOperationsInput | string | null
     unit?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
@@ -2194,6 +2217,7 @@ export namespace Prisma {
     size?: string | null
     quantity?: number | null
     volume?: number | null
+    dimensions?: string | null
     unit?: string | null
   }
 
@@ -2205,6 +2229,7 @@ export namespace Prisma {
     size?: NullableStringFieldUpdateOperationsInput | string | null
     quantity?: NullableIntFieldUpdateOperationsInput | number | null
     volume?: NullableIntFieldUpdateOperationsInput | number | null
+    dimensions?: NullableStringFieldUpdateOperationsInput | string | null
     unit?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
@@ -2217,6 +2242,7 @@ export namespace Prisma {
     size?: NullableStringFieldUpdateOperationsInput | string | null
     quantity?: NullableIntFieldUpdateOperationsInput | number | null
     volume?: NullableIntFieldUpdateOperationsInput | number | null
+    dimensions?: NullableStringFieldUpdateOperationsInput | string | null
     unit?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
@@ -2297,6 +2323,7 @@ export namespace Prisma {
     size?: SortOrder
     quantity?: SortOrder
     volume?: SortOrder
+    dimensions?: SortOrder
     unit?: SortOrder
   }
 
@@ -2316,6 +2343,7 @@ export namespace Prisma {
     size?: SortOrder
     quantity?: SortOrder
     volume?: SortOrder
+    dimensions?: SortOrder
     unit?: SortOrder
   }
 
@@ -2328,6 +2356,7 @@ export namespace Prisma {
     size?: SortOrder
     quantity?: SortOrder
     volume?: SortOrder
+    dimensions?: SortOrder
     unit?: SortOrder
   }
 

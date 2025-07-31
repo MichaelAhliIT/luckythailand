@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { CategoryCard } from "../CategoryCard";
 import { PartnerSection } from "../PartnerSection";
-import { BestSeller } from "../BestSeller";
+import { NewProducts } from "../NewProducts";
 import { Review } from "../Review";
 import { Mission } from "../Mission";
 import { useRouter } from "next/navigation";
@@ -134,7 +134,7 @@ export const HomePage = () => {
       </div>
       {/* End of Divider */}
       <PartnerSection />
-      <BestSeller />
+      <NewProducts />
       <Review />
       {/* <Mission colorMode="dark" /> */}
     </div>

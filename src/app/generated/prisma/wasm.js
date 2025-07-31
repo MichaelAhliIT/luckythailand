@@ -126,6 +126,7 @@ exports.Prisma.ProductScalarFieldEnum = {
   size: 'size',
   quantity: 'quantity',
   volume: 'volume',
+  dimensions: 'dimensions',
   unit: 'unit'
 };
 

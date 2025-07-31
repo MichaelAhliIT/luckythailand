@@ -10,6 +10,11 @@ interface Product {
   name: string;
   price: number;
   imageurl: string;
+  size: String;
+  quantity?: number;
+  volume?: number;
+  dimensions?: String;
+  unit?: String;
 }
 
 export const ProductPages = () => {
@@ -42,7 +47,18 @@ export const ProductPages = () => {
         .includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     })
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => {
+      // Get the size value (quantity or volume)
+      const getSizeValue = (product: Product) => {
+        return product.quantity || product.volume || 0;
+      };
+
+      const aSize = getSizeValue(a);
+      const bSize = getSizeValue(b);
+
+      // Sort by size value, then by name if sizes are equal
+      return aSize - bSize || a.name.localeCompare(b.name);
+    });
 
   const categoryLabels: Record<string, string> = {
     wetwipes: "Wet Wipes",

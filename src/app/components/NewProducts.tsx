@@ -1,16 +1,16 @@
 import Link from "next/link";
 
-export const BestSeller = () => {
+export const NewProducts = () => {
   return (
     <div className="w-full h-full flex flex-col md:flex-row gap-5 p-10 bg-slate-200 text-black md:mt-20">
       <div className="w-full md:w-1/3 flex flex-col gap-5 justify-center">
         <h1 className="text-5xl font-bold">
-          <span className="text-[#EF6795]">Best</span> Seller
+          <span className="text-[#EF6795]">New</span> Products
         </h1>
         <p className="text-sm md:text-base">
           Our top daily essentials—trusted by families every day. From gentle
-          soaps to reliable detergents and soft tissues, these bestsellers make
-          everyday life cleaner, simpler, and more comfortable.
+          soaps to reliable detergents and soft tissues, these latest products
+          make everyday life cleaner, simpler, and more comfortable.
         </p>
       </div>
       <div className="w-full md:w-2/3 flex">
