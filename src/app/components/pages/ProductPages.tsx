@@ -16,6 +16,7 @@ export const ProductPages = () => {
   const [category, setCategory] = useState("detergent");
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -33,9 +34,15 @@ export const ProductPages = () => {
     fetchProducts();
   }, []);
 
-  const filteredProducts = products.filter(
-    (product) => product.category === category
-  );
+  const filteredProducts = products
+    .filter((product) => {
+      const matchesCategory = product.category === category;
+      const matchesSearch = product.name
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   const categoryLabels: Record<string, string> = {
     wetwipes: "Wet Wipes",
@@ -90,7 +97,7 @@ export const ProductPages = () => {
             </li>
           ))}
 
-          <li className="p-4 tracking-wide bg-error-content text-base-100 text-lg font-extrabold">
+          {/* <li className="p-4 tracking-wide bg-error-content text-base-100 text-lg font-extrabold">
             PROMO
           </li>
           <li
@@ -110,7 +117,7 @@ export const ProductPages = () => {
             onClick={() => setCategory("promo3")}
           >
             <div>New Arrival</div>
-          </li>
+          </li> */}
         </ul>
 
         <div className="flex flex-col gap-10 w-full">
@@ -136,7 +143,13 @@ export const ProductPages = () => {
                   <path d="m21 21-4.3-4.3"></path>
                 </g>
               </svg>
-              <input type="search" required placeholder="Search Product" />
+              <input
+                type="search"
+                required
+                placeholder="Search Product"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />{" "}
             </label>
           </div>
 

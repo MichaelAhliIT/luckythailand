@@ -36,7 +36,7 @@ export const HomePage = () => {
             </p>
           </div>
           <button
-            className="btn bg-slate-700 text-lg text-secondary w-3/4 md:w-1/3 mt-5 p-6"
+            className="btn bg-slate-700 text-base lg:text-lg text-secondary w-3/4 lg:w-1/2 xl:w-1/3  mt-5 p-6"
             onClick={() => router.push("/products")}
           >
             Shop Now

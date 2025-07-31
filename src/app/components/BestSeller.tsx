@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const BestSeller = () => {
   return (
     <div className="w-full h-full flex flex-col md:flex-row gap-5 p-10 bg-slate-200 text-black md:mt-20">
@@ -13,86 +15,65 @@ export const BestSeller = () => {
       </div>
       <div className="w-full md:w-2/3 flex">
         <div className="carousel carousel-center rounded-box w-full space-x-4 p-4 text-secondary-content">
-          <div className="carousel-item">
-            <div className="card bg-base-100 w-72 md:w-90 shadow-sm">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Shoes"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">Card Title</h2>
-                <p>
-                  A card component has a figure, a body part, and inside body
-                  there are title and actions parts
-                </p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
+          <Link href="/products">
+            <div className="carousel-item h-full hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+              <div className="card bg-base-100 w-72 md:w-90 shadow-sm">
+                <figure>
+                  <img
+                    src="/detergent/det1.png"
+                    alt="Detergent"
+                    className="w-full h-40 object-contain"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    ผลิตภัณฑ์ซักผ้า ลัคกี้คลีน ลักซ์ชูเรียส มิสต์
+                    กลิ่นพิงค์มิราจ 1200 ml
+                  </h2>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="carousel-item">
-            <div className="card bg-base-100 w-72 md:w-90 shadow-sm">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Shoes"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">Card Title</h2>
-                <p>
-                  A card component has a figure, a body part, and inside body
-                  there are title and actions parts
-                </p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
+          </Link>
+
+          <Link href="/products">
+            <div className="carousel-item h-full hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+              <div className="card bg-base-100 w-72 md:w-90 shadow-sm">
+                <figure>
+                  <img
+                    src="/detergent/det2.png"
+                    alt="Shoes"
+                    className="w-full h-40 object-contain"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    ผลิตภัณฑ์ซักผ้า ลัคกี้คลีน ลักซ์ชูเรียส มิสต์
+                    กลิ่นโอเชียนเพิร์ล 1200 ml
+                  </h2>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="carousel-item">
-            <div className="card bg-base-100 w-72 md:w-90 shadow-sm">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Shoes"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">Card Title</h2>
-                <p>
-                  A card component has a figure, a body part, and inside body
-                  there are title and actions parts
-                </p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
+          </Link>
+
+          <Link href="/products">
+            <div className="carousel-item h-full hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+              <div className="card bg-base-100 w-72 md:w-90 shadow-sm">
+                <figure>
+                  <img
+                    src="/detergent/det3.png"
+                    alt="Shoes"
+                    className="w-full h-40 object-contain"
+                  />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title">
+                    ผลิตภัณฑ์ซักผ้า ลัคกี้คลีน ลักซ์ชูเรียส มิสต์
+                    กลิ่นมิสทิคไวโอเลต 1200 ml
+                  </h2>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="carousel-item">
-            <div className="card bg-base-100 w-72 md:w-90 shadow-sm">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Shoes"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">Card Title</h2>
-                <p>
-                  A card component has a figure, a body part, and inside body
-                  there are title and actions parts
-                </p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

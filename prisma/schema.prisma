@@ -17,4 +17,8 @@ model Product {
   name String 
   price Float
   imageurl String
+  size String?
+  quantity Int?
+  volume Int?
+  unit String?
 }
