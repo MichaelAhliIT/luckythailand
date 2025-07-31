@@ -5,7 +5,6 @@ import { CategoryCard } from "../CategoryCard";
 import { PartnerSection } from "../PartnerSection";
 import { NewProducts } from "../NewProducts";
 import { Review } from "../Review";
-import { Mission } from "../Mission";
 import { useRouter } from "next/navigation";
 import * as motion from "motion/react-client";
 import { useEffect, useState } from "react";
@@ -43,7 +42,7 @@ export const HomePage = () => {
           </button>
         </div>
         <div className="w-full md:w-3/5 md:p-10 flex items-center justify-center">
-          <img
+          <Image
             src="/luckyproducts.png"
             alt=""
             className="w-full object-cover aspect-auto"

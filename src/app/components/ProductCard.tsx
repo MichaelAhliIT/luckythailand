@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type CategoryCardProps = {
   title: string;
   desc?: string;
@@ -8,7 +10,7 @@ export const ProductCard = ({ title, desc, imageurl }: CategoryCardProps) => {
   return (
     <div className="card bg-base-100 shadow-xl h-full flex flex-col justify-between rounded-xl border border-slate-100 ">
       <figure className="">
-        <img
+        <Image
           src={imageurl}
           alt={title}
           className="w-full h-40 object-contain"

@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const cards = [
   {
@@ -85,7 +86,7 @@ export const CarouselCard = () => {
             >
               {/* Card with fixed height and flex layout */}
               <div className="h-80 flex flex-col p-4">
-                <img
+                <Image
                   src={card.image}
                   alt={card.title}
                   className="h-40 w-full object-contain rounded mb-3 flex-shrink-0"
