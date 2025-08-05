@@ -1,4 +1,4 @@
-import { PrismaClient } from "@/app/generated/prisma";
+import { PrismaClient } from "@/app/[locale]/generated/prisma";
 
 const prisma = new PrismaClient();
 
@@ -10,7 +10,7 @@ const products = [
     imageurl: "/cotton/cotton1.png",
     size: "200 ก้าน",
     quantity: 200,
-    unit: "ก้าน"
+    unit: "ก้าน",
   },
   {
     category: "cotton",
@@ -19,7 +19,7 @@ const products = [
     imageurl: "/cotton/cotton2.png",
     size: "100 ชิ้น",
     quantity: 100,
-    unit: "ชิ้น"
+    unit: "ชิ้น",
   },
   {
     category: "cotton",
@@ -28,7 +28,7 @@ const products = [
     imageurl: "/cotton/cotton3.png",
     size: "80 แผ่น",
     quantity: 80,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "cotton",
@@ -37,7 +37,7 @@ const products = [
     imageurl: "/cotton/cotton4.png",
     size: "400 ก้าน",
     quantity: 400,
-    unit: "ก้าน"
+    unit: "ก้าน",
   },
   {
     category: "cotton",
@@ -46,7 +46,7 @@ const products = [
     imageurl: "/cotton/cotton5.png",
     size: "250 ก้าน",
     quantity: 250,
-    unit: "ก้าน"
+    unit: "ก้าน",
   },
   {
     category: "cotton",
@@ -55,7 +55,7 @@ const products = [
     imageurl: "/cotton/cotton6.png",
     size: "100 ก้าน",
     quantity: 100,
-    unit: "ก้าน"
+    unit: "ก้าน",
   },
   {
     category: "detergent",
@@ -64,7 +64,7 @@ const products = [
     imageurl: "/detergent/det1.png",
     size: "1200ml",
     volume: 1200,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -73,7 +73,7 @@ const products = [
     imageurl: "/detergent/det2.png",
     size: "1200ml",
     volume: 1200,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -82,7 +82,7 @@ const products = [
     imageurl: "/detergent/det3.png",
     size: "1200ml",
     volume: 1200,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -91,7 +91,7 @@ const products = [
     imageurl: "/detergent/det4.png",
     size: "800ml",
     volume: 800,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -100,7 +100,7 @@ const products = [
     imageurl: "/detergent/det5.png",
     size: "800ml",
     volume: 800,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -109,7 +109,7 @@ const products = [
     imageurl: "/detergent/det6.png",
     size: "3500ml",
     volume: 3500,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -118,7 +118,7 @@ const products = [
     imageurl: "/detergent/det7.png",
     size: "3500ml",
     volume: 3500,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -127,7 +127,7 @@ const products = [
     imageurl: "/detergent/det8.png",
     size: "800ml",
     volume: 800,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -136,7 +136,7 @@ const products = [
     imageurl: "/detergent/det9.png",
     size: "800ml",
     volume: 800,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -145,7 +145,7 @@ const products = [
     imageurl: "/detergent/det10.png",
     size: "600ml",
     volume: 600,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -154,7 +154,7 @@ const products = [
     imageurl: "/detergent/det11.png",
     size: "600ml",
     volume: 600,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -163,7 +163,7 @@ const products = [
     imageurl: "/detergent/det12.png",
     size: "600ml",
     volume: 600,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "detergent",
@@ -172,7 +172,7 @@ const products = [
     imageurl: "/detergent/det13.png",
     size: "600ml",
     volume: 600,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "dishwashing",
@@ -181,7 +181,7 @@ const products = [
     imageurl: "/dishwashing/dish1.png",
     size: "700ml",
     volume: 700,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "dishwashing",
@@ -190,7 +190,7 @@ const products = [
     imageurl: "/dishwashing/dish2.png",
     size: "700ml",
     volume: 700,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "dishwashing",
@@ -199,7 +199,7 @@ const products = [
     imageurl: "/dishwashing/dish3.png",
     size: "700ml",
     volume: 700,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "dishwashing",
@@ -208,7 +208,7 @@ const products = [
     imageurl: "/dishwashing/dish4.png",
     size: "450ml",
     volume: 450,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "dishwashing",
@@ -217,7 +217,7 @@ const products = [
     imageurl: "/dishwashing/dish5.png",
     size: "450ml",
     volume: 450,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "dishwashing",
@@ -226,7 +226,7 @@ const products = [
     imageurl: "/dishwashing/dish6.png",
     size: "450ml",
     volume: 450,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "dishwashing",
@@ -235,7 +235,7 @@ const products = [
     imageurl: "/dishwashing/dish7.png",
     size: "450ml",
     volume: 450,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "floor",
@@ -244,7 +244,7 @@ const products = [
     imageurl: "/floor/floor1.png",
     size: "800ml",
     volume: 800,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "floor",
@@ -253,7 +253,7 @@ const products = [
     imageurl: "/floor/floor2.png",
     size: "800ml",
     volume: 800,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "floor",
@@ -262,7 +262,7 @@ const products = [
     imageurl: "/floor/floor3.png",
     size: "800ml",
     volume: 800,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "garbagebag",
@@ -271,7 +271,7 @@ const products = [
     imageurl: "/garbagebag/garbage1.png",
     size: "28×36 นิ้ว",
     dimensions: "28×36",
-    unit: "นิ้ว"
+    unit: "นิ้ว",
   },
   {
     category: "garbagebag",
@@ -280,7 +280,7 @@ const products = [
     imageurl: "/garbagebag/garbage2.png",
     size: "26×34 นิ้ว",
     dimensions: "26×34",
-    unit: "นิ้ว"
+    unit: "นิ้ว",
   },
   {
     category: "garbagebag",
@@ -289,7 +289,7 @@ const products = [
     imageurl: "/garbagebag/garbage3.png",
     size: "24×28 นิ้ว",
     dimensions: "24×28",
-    unit: "นิ้ว"
+    unit: "นิ้ว",
   },
   {
     category: "garbagebag",
@@ -298,7 +298,7 @@ const products = [
     imageurl: "/garbagebag/garbage4.png",
     size: "20×25 นิ้ว",
     dimensions: "20×25",
-    unit: "นิ้ว"
+    unit: "นิ้ว",
   },
   {
     category: "garbagebag",
@@ -307,7 +307,7 @@ const products = [
     imageurl: "/garbagebag/garbage5.png",
     size: "18×20 นิ้ว",
     dimensions: "18×20",
-    unit: "นิ้ว"
+    unit: "นิ้ว",
   },
   {
     category: "garbagebag",
@@ -315,7 +315,7 @@ const products = [
     price: 4.99,
     imageurl: "/garbagebag/garbage6.png",
     size: "Unknown",
-    unit: "unknown"
+    unit: "unknown",
   },
   {
     category: "softener",
@@ -324,7 +324,7 @@ const products = [
     imageurl: "/softener/softener1.png",
     size: "500ml",
     volume: 500,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "softener",
@@ -333,7 +333,7 @@ const products = [
     imageurl: "/softener/softener2.png",
     size: "500ml",
     volume: 500,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "softener",
@@ -342,7 +342,7 @@ const products = [
     imageurl: "/softener/softener3.png",
     size: "500ml",
     volume: 500,
-    unit: "ml"
+    unit: "ml",
   },
   {
     category: "tissue",
@@ -351,16 +351,16 @@ const products = [
     imageurl: "/tissue/tissue1.png",
     size: "180 แผ่น",
     quantity: 180,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
-    {
+  {
     category: "tissue",
     name: "กระดาษเช็ดหน้า ลัคกี้แคร์ 180 แผ่นหนา2ชั้น ผลิตจากเยื่อกระดาษบริสุทธิ์ 100%",
     price: 2.99,
     imageurl: "/tissue/tissue2.png",
     size: "180 แผ่น",
     quantity: 180,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -369,7 +369,7 @@ const products = [
     imageurl: "/tissue/tissue3.png",
     size: "50 แผ่น",
     quantity: 50,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -378,7 +378,7 @@ const products = [
     imageurl: "/tissue/tissue4.png",
     size: "50 แผ่น",
     quantity: 50,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -387,7 +387,7 @@ const products = [
     imageurl: "/tissue/tissue5.png",
     size: "45 แผ่น",
     quantity: 45,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -396,7 +396,7 @@ const products = [
     imageurl: "/tissue/tissue6.png",
     size: "45 แผ่น",
     quantity: 45,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -405,7 +405,7 @@ const products = [
     imageurl: "/tissue/tissue7.png",
     size: "65 แผ่น",
     quantity: 65,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -414,7 +414,7 @@ const products = [
     imageurl: "/tissue/tissue8.png",
     size: "6 ม้วน",
     quantity: 6,
-    unit: "ม้วน"
+    unit: "ม้วน",
   },
   {
     category: "tissue",
@@ -423,7 +423,7 @@ const products = [
     imageurl: "/tissue/tissue9.png",
     size: "6 ม้วน",
     quantity: 6,
-    unit: "ม้วน"
+    unit: "ม้วน",
   },
   {
     category: "tissue",
@@ -432,7 +432,7 @@ const products = [
     imageurl: "/tissue/tissue10.png",
     size: "170 แผ่น",
     quantity: 170,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -441,7 +441,7 @@ const products = [
     imageurl: "/tissue/tissue11.png",
     size: "170 แผ่น",
     quantity: 170,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -450,7 +450,7 @@ const products = [
     imageurl: "/tissue/tissue12.png",
     size: "250 แผ่น",
     quantity: 250,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -459,7 +459,7 @@ const products = [
     imageurl: "/tissue/tissue13.png",
     size: "250 แผ่น",
     quantity: 250,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -468,7 +468,7 @@ const products = [
     imageurl: "/tissue/tissue14.png",
     size: "120 แผ่น",
     quantity: 120,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -477,7 +477,7 @@ const products = [
     imageurl: "/tissue/tissue15.png",
     size: "120 แผ่น",
     quantity: 120,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -486,7 +486,7 @@ const products = [
     imageurl: "/tissue/tissue16.png",
     size: "1000 แผ่น",
     quantity: 1000,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
   {
     category: "tissue",
@@ -495,7 +495,7 @@ const products = [
     imageurl: "/tissue/tissue17.png",
     size: "1000 แผ่น",
     quantity: 1000,
-    unit: "แผ่น"
+    unit: "แผ่น",
   },
 ];
 

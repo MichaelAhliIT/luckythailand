@@ -1,0 +1,70 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products"
+  },
+  "HomePage": {
+    "heroText": "From household essentials to lifestyle must-haves, we bring everything to your doorstep. Shop smarter, live better.",
+    "shopNow": "Show Now",
+    "featured": "Featured Products",
+    "cleanText": "Powerful and eco-friendly cleaning for a spotless, fresh home",
+    "careText": "Gentle daily care that nourishes and protects your skin naturally",
+    "bannerTitle1": "Quality You",
+    "bannerTitle2": "Prices You",
+    "trust": "Trust",
+    "love": "Love",
+    "bannerDesc": "We make everyday essentials that are simple, safe, and designed to fit your lifestyle. Clean living starts with quality you can trust — delivered with a lucky touch.",
+    "findProduct": "Find Our Products At",
+    "new": "New",
+    "products": "Products",
+    "newProductDesc": "Our top daily essentials—trusted by families every day. From gentle soaps to reliable detergents and soft tissues, these latest products make everyday life cleaner, simpler, and more comfortable.",
+    "reviewTitle": "What Our Customers Are Saying"
+  },
+  "AboutPage": {
+    "weare": "We Are",
+    "lucky": "Lucky",
+    "header": "We are lucky to be part of your everyday routine—bringing you safe, effective, and trusted care for a cleaner, healthier home.",
+    "shopTitle": "Shop Our Shopee",
+    "bentoTitle": "Your One-Way Stop to Your Every Needs",
+    "ourPartner": " Our Partner",
+    "partnerDesc": "We proudly collaborate with trusted partners who share our commitment to quality and innovation. Together, we create greater value, drive growth, and deliver better solutions for our customers",
+    "qualityTrust": "Quality You Can Trust",
+    "qualityDesc": "Our daily care products, from detergent to tissues, are made with safe, reliable ingredients—delivering quality you can trust for your everyday needs",
+    "mainLines": "Main Product Lines",
+    "linesDesc": "Lucky Care and Lucky Clean are here to help with you daily needs",
+    "carePlanet": "Made with Care for Home & Planet",
+    "planetDesc": "We believe in products that are gentle for your family and kind to the environment. That’s why we choose safe materials, minimal packaging, and sustainable practices wherever possible",
+    "our": "Our",
+    "mission": "Mission",
+    "vision": "Vision",
+    "missionDesc": "We’re here to support families with safe, gentle, and reliable essentials made for everyday life — from baby care to home cleaning — because true care begins at home, in the little things we use and trust every day.",
+    "visionDesc": "We imagine a future where every home has access to high-quality, sustainable essentials — supporting a healthier lifestyle for families and the planet."
+  },
+  "Product": {
+    "detergent": "Detergent",
+    "dishwashing": "Dishwashing Liquid",
+    "floor": "Floor Liquid",
+    "garbage": "Garbage Bag",
+    "tissue": "Tissue",
+    "softener": "Softener",
+    "cotton": "Cotton",
+    "search": "Search Product"
+  },
+  "Footer": {
+    "products": "Products",
+    "detergent": "Detergent",
+    "dishwashing": "Dishwashing Liquid",
+    "floor": "Floor Liquid",
+    "garbage": "Garbage Bag",
+    "tissue": "Tissue",
+    "softener": "Softener",
+    "cotton": "Cotton",
+    "company": "Company",
+    "about": "About Us",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "toc": "Terms of Service",
+    "social": "Social"
+  }
+}
