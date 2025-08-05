@@ -28,7 +28,7 @@ export const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-lg"
+            className="menu menu-sm dropdown-content bg-slate-50 rounded-box z-40 mt-3 w-52 p-2 shadow text-lg"
           >
             {/* These Links should also be locale-aware. Assuming next-intl/link is used */}
             <li>

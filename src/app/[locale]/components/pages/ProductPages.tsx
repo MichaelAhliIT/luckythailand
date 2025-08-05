@@ -150,7 +150,7 @@ export const ProductPages = () => {
             <h1 className="text-3xl p-3 font-bold capitalize flex-1 hidden md:flex">
               {allCategories[category] || category}
             </h1>
-            <PopupSidebar />
+            <PopupSidebar category={category} setCategory={setCategory} />
             <label className="input mx-5">
               <svg
                 className="h-[1em] opacity-50"

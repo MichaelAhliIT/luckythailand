@@ -1,11 +1,32 @@
 import { useState } from "react";
-import { AlignLeft, Menu, X } from "lucide-react";
+import { AlignLeft, X } from "lucide-react";
 
-export default function PopupSidebar() {
+interface PopupSidebarProps {
+  category: string;
+  setCategory: (cat: string) => void;
+}
+
+const luckyCleanCategory: Record<string, string> = {
+  detergent: "Detergent",
+  dishwashing: "Dishwashing Liquid",
+  floor: "Floor Liquid",
+  garbage: "Garbage Bag",
+};
+
+const luckyCareCategory: Record<string, string> = {
+  tissue: "Tissue",
+  softener: "Softener",
+  cotton: "Cotton",
+};
+
+export default function PopupSidebar({ category, setCategory }: PopupSidebarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+  const toggleSidebar = () => setIsOpen((prev) => !prev);
+
+  const handleSelect = (key: string) => {
+    setCategory(key);
+    setIsOpen(false);
   };
 
   return (
@@ -13,7 +34,7 @@ export default function PopupSidebar() {
       {/* Hamburger Menu Button */}
       <button
         onClick={toggleSidebar}
-        className="flex top-4 left-4 p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500 z-30"
+        className="flex top-4 left-4 p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500 z-10"
         aria-label="Toggle menu"
       >
         {isOpen ? <X size={24} /> : <AlignLeft size={24} color="#BF0004" />}
@@ -49,65 +70,33 @@ export default function PopupSidebar() {
               <li className="bg-[#BF0004] p-3">
                 <h1 className="text-white">Lucky Clean</h1>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
-                >
-                  Detergent
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
-                >
-                  Dishwashing Liquid
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
-                >
-                  Floor Liquid
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
-                >
-                  Garbage Bag
-                </a>
-              </li>
+              {Object.entries(luckyCleanCategory).map(([key, label]) => (
+                <li key={key}>
+                  <button
+                    onClick={() => handleSelect(key)}
+                    className={`block w-full text-left p-2 rounded-md hover:bg-gray-200 ${
+                      category === key ? "bg-gray-200 font-bold" : ""
+                    }`}
+                  >
+                    {label}
+                  </button>
+                </li>
+              ))}
               <li className="bg-[#BF0004] p-3">
                 <h1 className="text-white">Lucky Care</h1>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
-                >
-                  Tissue
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
-                >
-                  Softener
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block p-2 rounded-md text-gray-800 hover:bg-gray-200"
-                >
-                  Cotton
-                </a>
-              </li>
+              {Object.entries(luckyCareCategory).map(([key, label]) => (
+                <li key={key}>
+                  <button
+                    onClick={() => handleSelect(key)}
+                    className={`block w-full text-left p-2 rounded-md hover:bg-gray-200 ${
+                      category === key ? "bg-gray-200 font-bold" : ""
+                    }`}
+                  >
+                    {label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
