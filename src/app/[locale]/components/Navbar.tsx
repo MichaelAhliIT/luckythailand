@@ -3,9 +3,8 @@
 // 1. IMPORTANT: Import hooks and Link from next-intl's navigation
 import { useLocale, useTranslations } from "next-intl";
 import { Menu } from "lucide-react";
-import Link from "next/link"; // Keep this for now, but we will discuss alternatives
 import "/node_modules/flag-icons/css/flag-icons.min.css";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
 export const Navbar = () => {
   const t = useTranslations("Navigation");
