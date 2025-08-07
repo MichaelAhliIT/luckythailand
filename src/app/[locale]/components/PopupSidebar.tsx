@@ -1,32 +1,37 @@
 import { useState } from "react";
 import { AlignLeft, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface PopupSidebarProps {
   category: string;
   setCategory: (cat: string) => void;
 }
 
-const luckyCleanCategory: Record<string, string> = {
-  detergent: "Detergent",
-  dishwashing: "Dishwashing Liquid",
-  floor: "Floor Liquid",
-  garbage: "Garbage Bag",
-};
-
-const luckyCareCategory: Record<string, string> = {
-  tissue: "Tissue",
-  softener: "Softener",
-  cotton: "Cotton",
-};
-
-export default function PopupSidebar({ category, setCategory }: PopupSidebarProps) {
+export default function PopupSidebar({
+  category,
+  setCategory,
+}: PopupSidebarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("Product");
 
   const toggleSidebar = () => setIsOpen((prev) => !prev);
 
   const handleSelect = (key: string) => {
     setCategory(key);
     setIsOpen(false);
+  };
+
+  const luckyCleanCategory: Record<string, string> = {
+    detergent: t("detergent"),
+    dishwashing: t("dishwashing"),
+    floor: t("floor"),
+    garbage: t("garbage"),
+  };
+
+  const luckyCareCategory: Record<string, string> = {
+    tissue: t("tissue"),
+    softener: t("softener"),
+    cotton: t("cotton"),
   };
 
   return (
@@ -56,7 +61,7 @@ export default function PopupSidebar({ category, setCategory }: PopupSidebarProp
       >
         <div className="p-5">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-xl font-bold text-gray-800">Products</h2>
+            <h2 className="text-xl font-bold text-gray-800">{t("products")}</h2>
             <button
               onClick={toggleSidebar}
               className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none"

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora } from "next/font/google";
+import { Noto_Sans_Thai } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
@@ -7,7 +7,7 @@ import { routing } from "@/i18n/routing";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 
-const lora = Lora({
+const lora = Noto_Sans_Thai({
   subsets: ["latin"],
 });
 

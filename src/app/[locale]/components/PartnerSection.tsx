@@ -8,22 +8,22 @@ export const PartnerSection = () => {
 
       <div className="w-3/4 grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 gap-10 items-center place-items-center">
         <div>
-          <img src="watson.png" alt="" />
+          <img src="/watson.png" alt="" />
         </div>
         <div className="">
           <img src="/makro.png" alt="" />
         </div>
         <div className="">
-          <img src="lawson.png" alt="" />
+          <img src="/lawson.png" alt="" />
         </div>
         <div className="md:size-60">
           <img src="/cjexpress.png" alt="" />
         </div>
         <div className="">
-          <img src="pt.png" alt="" />
+          <img src="/pt.png" alt="" />
         </div>
         <div className="md:size-40">
-          <img src="jiffy.png" alt="" />
+          <img src="/jiffy.png" alt="" />
         </div>
       </div>
     </div>
