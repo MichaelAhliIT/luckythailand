@@ -27,7 +27,7 @@ export const HomePage = () => {
   return (
     <div className="w-full h-full pt-14">
       {/* Hero section */}
-      <div className="w-full h-[calc(100vh-10vh)] flex flex-col-reverse md:flex-row md:mt-10">
+      <div className="w-full h-[calc(100vh-10vh)] flex flex-col-reverse md:flex-row mt-14 md:mt-10">
         <div className="w-full md:w-2/5 flex flex-col justify-center p-10 md:pl-28">
           <div className="flex flex-col gap-5">
             <h1 className="text-6xl font-bold text-red-700">Lucky Thailand</h1>

@@ -1,9 +1,7 @@
 "use client";
 
-// 1. IMPORTANT: Import hooks and Link from next-intl's navigation
 import { useLocale, useTranslations } from "next-intl";
 import { Menu } from "lucide-react";
-import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
 export const Navbar = () => {
@@ -12,9 +10,14 @@ export const Navbar = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  // 3. The function to switch the language
+  const closeDropdown = () => {
+    // wait a tick so the click finishes, then drop focus -> dropdown closes
+    requestAnimationFrame(() => {
+      (document.activeElement as HTMLElement | null)?.blur();
+    });
+  };
+
   const switchLocale = (nextLocale: string) => {
-    // This will switch the locale while keeping the user on the same page
     router.push(pathname, { locale: nextLocale });
   };
 
@@ -25,26 +28,34 @@ export const Navbar = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <Menu size={24} color="#BF0004" />
           </div>
+
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-slate-50 rounded-box z-40 mt-3 w-52 p-2 shadow text-lg"
           >
-            {/* These Links should also be locale-aware. Assuming next-intl/link is used */}
             <li>
-              <Link href="/">{t("home")}</Link>
+              <Link href="/" onClick={closeDropdown}>
+                {t("home")}
+              </Link>
             </li>
             <li>
-              <Link href="/products">{t("products")}</Link>
+              <Link href="/products" onClick={closeDropdown}>
+                {t("products")}
+              </Link>
             </li>
             <li>
-              <Link href="/about">{t("about")}</Link>
+              <Link href="/about" onClick={closeDropdown}>
+                {t("about")}
+              </Link>
             </li>
           </ul>
         </div>
+
         <a className="btn btn-ghost text-xl font-bold">LUCKY</a>
       </div>
+
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-lg gap-5 font-semibold ">
+        <ul className="menu menu-horizontal px-1 text-lg gap-5 font-semibold">
           <li>
             <Link href="/">{t("home")}</Link>
           </li>
@@ -56,6 +67,7 @@ export const Navbar = () => {
           </li>
         </ul>
       </div>
+
       <div className="navbar-end">
         <div className="dropdown dropdown-end">
           <div
@@ -63,22 +75,31 @@ export const Navbar = () => {
             role="button"
             className="btn bg-slate-700 text-secondary m-1"
           >
-            {/* Display current language based on locale */}
             {locale === "th" ? "Thai" : "English"}
           </div>
-          <ul
-            tabIndex={0}
-            className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm"
-          >
-            {/* 4. Update onClick to use the new function and add disabled state */}
+
+          <ul className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm">
             <li className={locale === "en" ? "disabled" : ""}>
-              <a onClick={() => switchLocale("en")}>
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  switchLocale("en");
+                  closeDropdown();
+                }}
+              >
                 <span className="fi fi-us" />
                 English
               </a>
             </li>
+
             <li className={locale === "th" ? "disabled" : ""}>
-              <a onClick={() => switchLocale("th")}>
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  switchLocale("th");
+                  closeDropdown();
+                }}
+              >
                 <span className="fi fi-th" />
                 Thai
               </a>
