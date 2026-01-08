@@ -78,13 +78,15 @@ export const Navbar = () => {
             {locale === "th" ? "Thai" : "English"}
           </div>
 
-          <ul className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow-sm">
+          <ul className="dropdown-content menu bg-base-100 rounded-box z-40 w-52 p-2 shadow-sm">
             <li className={locale === "en" ? "disabled" : ""}>
               <a
+                href="#"
                 onClick={(e) => {
                   e.preventDefault();
                   switchLocale("en");
                   closeDropdown();
+                  console.log("English");
                 }}
               >
                 <span className="fi fi-us" />
@@ -94,10 +96,12 @@ export const Navbar = () => {
 
             <li className={locale === "th" ? "disabled" : ""}>
               <a
+                href="#"
                 onClick={(e) => {
                   e.preventDefault();
                   switchLocale("th");
                   closeDropdown();
+                  console.log("Thai");
                 }}
               >
                 <span className="fi fi-th" />
