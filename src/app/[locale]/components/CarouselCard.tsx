@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { div } from "motion/react-client";
 
 const cards = [
   {
@@ -56,7 +57,7 @@ export const CarouselCard = () => {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto px-4 py-10">
+    <div className="relative w-full max-w-6xl md:max-w-5xl lg:max-w-6xl mx-auto px-4 lg:px-16 py-10">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-3xl">{t("shopTitle")}</h2>
       </div>
@@ -64,14 +65,14 @@ export const CarouselCard = () => {
       <div className="relative">
         <button
           onClick={() => scroll("left")}
-          className="p-2 bg-gray-200 rounded-full hover:bg-gray-300 absolute left-0 top-[50%] transform -translate-y-1/2 z-10 shadow-lg"
+          className="hidden lg:flex p-2 bg-gray-200 rounded-full hover:bg-gray-300 absolute -left-14 top-[30%] lg:top-[40%] transform -translate-y-1/2 z-10 shadow-lg hover:cursor-pointer"
         >
           <ChevronLeft />
         </button>
 
         <button
           onClick={() => scroll("right")}
-          className="p-2 bg-gray-200 rounded-full hover:bg-gray-300 absolute right-0 top-[50%] transform -translate-y-1/2 z-10 shadow-lg"
+          className="hidden lg:flex p-2 bg-gray-200 rounded-full hover:bg-gray-300 absolute -right-14 top-[30%] lg:top-[40%] transform -translate-y-1/2 z-10 shadow-lg hover:cursor-pointer"
         >
           <ChevronRight />
         </button>
@@ -82,22 +83,24 @@ export const CarouselCard = () => {
           style={{ height: "auto" }}
         >
           {cards.map((card, index) => (
-            <div
-              key={index}
-              className="min-w-[250px] w-60 flex-shrink-0 bg-white hover:bg-pink-50 rounded-xl shadow border border-black snap-start transition-colors duration-200"
-            >
-              {/* Card with fixed height and flex layout */}
-              <div className="h-80 flex flex-col p-4">
-                <Image
-                  width={400}
-                  height={600}
-                  src={card.image}
-                  alt={card.title}
-                  className="h-40 w-full object-contain rounded mb-3 flex-shrink-0"
-                />
-                <div className="flex-1 flex flex-col">
-                  <h3 className="text-lg font-bold mb-2">{card.title}</h3>
+            <div className="flex flex-col gap-3">
+              <div
+                key={index}
+                className=" w-32 md:w-60 flex items-center justify-center flex-shrink-0 bg-blue-200/30 hover:bg-blue-200 rounded-xl shadow border-black snap-start transition-colors duration-200"
+              >
+                {/* Card with fixed height and flex layout */}
+                <div className="h-40 md:h-80">
+                  <Image
+                    width={400}
+                    height={600}
+                    src={card.image}
+                    alt={card.title}
+                    className="h-40 md:h-80 w-full object-contain rounded flex-shrink-0"
+                  />
                 </div>
+              </div>
+              <div className="flex-1 flex flex-col">
+                <h3 className="mb-2">{card.title}</h3>
               </div>
             </div>
           ))}

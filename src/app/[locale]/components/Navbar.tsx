@@ -33,7 +33,7 @@ export const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-slate-50 rounded-box z-40 mt-3 w-52 p-2 shadow text-lg"
           >
-            <li>
+              <li>
               <Link href="/" onClick={closeDropdown}>
                 {t("home")}
               </Link>
