@@ -15,7 +15,8 @@
   "dependencies": {
     "@prisma/client": "^6.6.0",
     "@prisma/extension-accelerate": "^1.3.0",
-    "flag-icons": "^7.3.2",
+    "country-flag-icons": "^1.6.4",
+    "flag-icons": "^7.5.0",
     "i18next": "^25.3.0",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.487.0",

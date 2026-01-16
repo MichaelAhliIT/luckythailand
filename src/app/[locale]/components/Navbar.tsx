@@ -24,33 +24,6 @@ export const Navbar = () => {
   return (
     <div className="navbar bg-white/95 shadow-sm text-secondary-content fixed z-20">
       <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <Menu size={24} color="#BF0004" />
-          </div>
-
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-slate-50 rounded-box z-40 mt-3 w-52 p-2 shadow text-lg"
-          >
-              <li>
-              <Link href="/" onClick={closeDropdown}>
-                {t("home")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/products" onClick={closeDropdown}>
-                {t("products")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" onClick={closeDropdown}>
-                {t("about")}
-              </Link>
-            </li>
-          </ul>
-        </div>
-
         <a className="btn btn-ghost text-xl font-bold">LUCKY</a>
       </div>
 
@@ -73,9 +46,21 @@ export const Navbar = () => {
           <div
             tabIndex={0}
             role="button"
-            className="btn bg-slate-700 text-secondary m-1"
+            className="btn bg-transparent border-none text-secondary m-1"
           >
-            {locale === "th" ? "Thai" : "English"}
+            {locale === "th" ? (
+              <img
+                className="size-5"
+                alt="Thailand"
+                src="https://purecatamphetamine.github.io/country-flag-icons/3x2/TH.svg"
+              />
+            ) : (
+              <img
+                className="size-5"
+                alt="United States"
+                src="https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
+              />
+            )}
           </div>
 
           <ul className="dropdown-content menu bg-base-100 rounded-box z-40 w-52 p-2 shadow-sm">
@@ -110,6 +95,32 @@ export const Navbar = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="dropdown dropdown-end">
+        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <Menu size={24} color="#BF0004" />
+        </div>
+
+        <ul
+          tabIndex={0}
+          className="menu menu-sm dropdown-content bg-slate-50 rounded-box z-40 mt-3 w-52 p-2 shadow text-lg"
+        >
+          <li>
+            <Link href="/" onClick={closeDropdown}>
+              {t("home")}
+            </Link>
+          </li>
+          <li>
+            <Link href="/products" onClick={closeDropdown}>
+              {t("products")}
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" onClick={closeDropdown}>
+              {t("about")}
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
   );
