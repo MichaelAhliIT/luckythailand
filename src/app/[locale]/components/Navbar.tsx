@@ -141,7 +141,7 @@ export const Navbar = () => {
             <Link
               href="/"
               onClick={closeDropdown}
-              className={isActive("/") ? "border-l-4 border-primary" : ""}
+              className={isActive("/") ? "lg:border-l-4 border-primary" : ""}
             >
               {t("home")}
             </Link>
@@ -151,7 +151,7 @@ export const Navbar = () => {
               href="/products"
               onClick={closeDropdown}
               className={
-                isActive("/products") ? "border-l-4 border-primary" : ""
+                isActive("/products") ? "lg:border-l-4 border-primary" : ""
               }
             >
               {t("products")}
@@ -161,7 +161,9 @@ export const Navbar = () => {
             <Link
               href="/about"
               onClick={closeDropdown}
-              className={isActive("/about") ? "border-l-4 border-primary" : ""}
+              className={
+                isActive("/about") ? "lg:border-l-4 border-primary" : ""
+              }
             >
               {t("about")}
             </Link>
