@@ -25,7 +25,7 @@ export default function PopupSidebar({
     detergent: t("detergent"),
     dishwashing: t("dishwashing"),
     floor: t("floor"),
-    garbage: t("garbage"),
+    garbagebag: t("garbage"),
   };
 
   const luckyCareCategory: Record<string, string> = {
