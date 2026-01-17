@@ -91,7 +91,7 @@ export const ProductPages = () => {
 
   return (
     <div className="w-full min-h-screen flex pt-14">
-      <div className="flex w-full justify-center py-10 px-2 md:px-10 gap-10">
+      <div className="flex w-full justify-center py-10 px-5 md:px-10 gap-10">
         <ul className="list bg-base-100 md:min-w-1/7 hidden md:flex shadow-xl">
           {/* Lucky Clean */}
           <li className="p-4 tracking-wide bg-error-content text-base-100 text-lg font-extrabold  ">
@@ -101,7 +101,11 @@ export const ProductPages = () => {
           {Object.keys(luckyCleanCategory).map((key) => (
             <li
               key={key}
-              className="list-row cursor-pointer hover:bg-secondary rounded-none"
+              className={`list-row cursor-pointer rounded-none ${
+                category === key
+                  ? "bg-secondary text-red-900"
+                  : "hover:bg-secondary/30"
+              }`}
               onClick={() => setCategory(key)}
             >
               <div>{luckyCleanCategory[key]}</div>
@@ -115,7 +119,11 @@ export const ProductPages = () => {
           {Object.keys(luckyCareCategory).map((key) => (
             <li
               key={key}
-              className="list-row cursor-pointer hover:bg-secondary rounded-none"
+              className={`list-row cursor-pointer rounded-none ${
+                category === key
+                  ? "bg-secondary text-red-900"
+                  : "hover:bg-secondary/30"
+              }`}
               onClick={() => setCategory(key)}
             >
               <div>{luckyCareCategory[key]}</div>
@@ -146,10 +154,10 @@ export const ProductPages = () => {
         </ul>
 
         <div className="flex flex-col gap-10 w-full">
-          <div className="bg-white flex items-center">
-            <h1 className="text-3xl p-3 font-bold capitalize flex-1 hidden md:flex">
+          <div className="bg-white flex items- justify-end">
+            {/* <h1 className="text-3xl p-3 font-bold capitalize flex-1 hidden md:flex">
               {allCategories[category] || category}
-            </h1>
+            </h1> */}
             <PopupSidebar category={category} setCategory={setCategory} />
             <label className="input mx-5">
               <svg
@@ -183,7 +191,7 @@ export const ProductPages = () => {
               <span className="loading loading-spinner loading-xl"></span>
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {filteredProducts.map((product) => (
                 <ProductCard
                   key={product.id}

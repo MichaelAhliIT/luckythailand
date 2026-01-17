@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AlignLeft, X } from "lucide-react";
+import { AlignLeft, SlidersHorizontal, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 interface PopupSidebarProps {
@@ -42,7 +42,11 @@ export default function PopupSidebar({
         className="flex top-4 left-4 p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-gray-500 z-10"
         aria-label="Toggle menu"
       >
-        {isOpen ? <X size={24} /> : <AlignLeft size={24} color="#BF0004" />}
+        {isOpen ? (
+          <X size={24} />
+        ) : (
+          <SlidersHorizontal size={24} color="#BF0004" />
+        )}
       </button>
 
       {/* Overlay */}
