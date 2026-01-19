@@ -34,7 +34,7 @@ export const HomePage = () => {
             <p className="w-full md:w-3/4">{t("heroText")}</p>
           </div>
           <button
-            className="btn bg-slate-700 text-base lg:text-lg text-secondary w-3/4 lg:w-1/2 xl:w-1/3  mt-5 p-6"
+            className="btn bg-slate-700 text-base text-secondary w-3/4 lg:w-1/2 xl:w-1/3 min-w-40 mt-5 p-6"
             onClick={() => router.push("/products")}
           >
             {t("shopNow")}
@@ -116,7 +116,7 @@ export const HomePage = () => {
       </motion.div>
       {/* End of Featured Product */}
       {/* Divider */}
-      <div className="w-full h-60 bg-slate-200 flex flex-col md:flex-row justify-center md:justify-start text-black mb-10 px-5 gap-5 md:gap-0">
+      <div className="w-full h-60 bg-pink-50 flex flex-col md:flex-row justify-center md:justify-start text-black mb-10 px-5 gap-5 md:gap-0">
         <div className="w-full flex items-center justify-center text-2xl md:text-5xl">
           <p className="tracking-wide font-bold text-center">
             {t("bannerTitle1")}{" "}
