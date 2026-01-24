@@ -11,19 +11,19 @@ const cards = [
     title:
       "ผลิตภัณฑ์ซักผ้า ลัคกี้คลีน ลักซ์ชูเรียส มิสต์ กลิ่นพิงค์มิราจ 1200 ml",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, eaque labore ullam similique magnam quo!",
-    image: "/detergent/det1.png",
+    image: "/detergent/detergent-pinkmirage-1200.png",
   },
   {
     title:
       "ผลิตภัณฑ์ซักผ้า ลัคกี้คลีน ลักซ์ชูเรียส มิสต์ กลิ่นโอเชียนเพิร์ล 1200 ml",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, eaque labore ullam similique magnam quo!",
-    image: "/detergent/det2.png",
+    image: "/detergent/detergent-oceanpearl-1200.png",
   },
   {
     title:
       "ผลิตภัณฑ์ซักผ้า ลัคกี้คลีน ลักซ์ชูเรียส มิสต์ กลิ่นมิสทิคไวโอเลต 1200 ml",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, eaque labore ullam similique magnam quo!",
-    image: "/detergent/det3.png",
+    image: "/detergent/detergent-mysticviolet-1200.png",
   },
   {
     title: "ทิชชูเปียก ลัคกี้แคร์ 50 แผ่น กลิ่นแป้งเด็ก",
