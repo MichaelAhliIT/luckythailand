@@ -5,7 +5,7 @@ import mapboxgl from "mapbox-gl";
 import { Search } from "lucide-react";
 
 // Replace with your Mapbox access token
-mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
+mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
 
 interface Store {
   id: number;
