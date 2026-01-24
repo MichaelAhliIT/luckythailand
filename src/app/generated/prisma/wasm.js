@@ -121,13 +121,16 @@ exports.Prisma.ProductScalarFieldEnum = {
   id: 'id',
   category: 'category',
   name: 'name',
+  engname: 'engname',
   price: 'price',
   imageurl: 'imageurl',
   size: 'size',
   quantity: 'quantity',
   volume: 'volume',
   dimensions: 'dimensions',
-  unit: 'unit'
+  unit: 'unit',
+  variant: 'variant',
+  description: 'description'
 };
 
 exports.Prisma.SortOrder = {

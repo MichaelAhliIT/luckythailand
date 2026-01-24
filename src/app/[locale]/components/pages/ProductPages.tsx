@@ -4,11 +4,14 @@ import { useEffect, useState } from "react";
 import { ProductCard } from "../ProductCard";
 import PopupSidebar from "../PopupSidebar";
 import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
+import { getSlugFromImageUrl } from "@/lib/utils/slug";
 
 interface Product {
   id: number;
   category: string;
   name: string;
+  engname?: string;
   price: number;
   imageurl: string;
   size: String;
@@ -16,6 +19,7 @@ interface Product {
   volume?: number;
   dimensions?: String;
   unit?: String;
+  variant?: String;
 }
 
 export const ProductPages = () => {
@@ -49,6 +53,11 @@ export const ProductPages = () => {
 
     fetchProducts();
   }, [locale]);
+
+  useEffect(() => {
+    // Reset search query when category changes
+    console.log(locale);
+  }, []);
 
   const filteredProducts = products
     .filter((product) => {
@@ -192,13 +201,24 @@ export const ProductPages = () => {
             </div>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {filteredProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  title={product.name}
-                  imageurl={product.imageurl}
-                />
-              ))}
+              {filteredProducts.map((product) => {
+                const slug = getSlugFromImageUrl(product.imageurl);
+
+                return (
+                  <Link
+                    key={product.id}
+                    href={`/products/${slug}`}
+                    className="block"
+                  >
+                    <ProductCard
+                      title={
+                        (locale === "en" ? product.engname : product.name) ?? ""
+                      }
+                      imageurl={product.imageurl}
+                    />
+                  </Link>
+                );
+              })}
             </div>
           )}
         </div>

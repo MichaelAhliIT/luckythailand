@@ -4,7 +4,7 @@ import Link from "next/link";
 export const NewProducts = () => {
   const t = useTranslations("HomePage");
   return (
-    <div className="w-full h-full flex flex-col md:flex-row gap-5 p-10 bg-slate-200 text-black md:mt-20">
+    <div className="w-full h-full flex flex-col md:flex-row gap-5 p-10 bg-blue-100 text-black md:mt-20">
       <div className="w-full md:w-1/3 flex flex-col gap-5 justify-center">
         <h1 className="text-5xl font-bold">
           <span className="text-[#EF6795]">{t("new")}</span> {t("products")}
@@ -18,7 +18,7 @@ export const NewProducts = () => {
               <div className="card bg-base-100 w-72 md:w-90 shadow-sm">
                 <figure>
                   <img
-                    src="/detergent/det1.png"
+                    src="/detergent/detergent-blossomkiss-600.png"
                     alt="Detergent"
                     className="w-full h-40 object-contain"
                   />
@@ -38,7 +38,7 @@ export const NewProducts = () => {
               <div className="card bg-base-100 w-72 md:w-90 shadow-sm">
                 <figure>
                   <img
-                    src="/detergent/det2.png"
+                    src="/detergent/detergent-floralkiss-600.png"
                     alt="Shoes"
                     className="w-full h-40 object-contain"
                   />
@@ -58,7 +58,7 @@ export const NewProducts = () => {
               <div className="card bg-base-100 w-72 md:w-90 shadow-sm">
                 <figure>
                   <img
-                    src="/detergent/det3.png"
+                    src="/detergent/detergent-pinkmirage-600.png"
                     alt="Shoes"
                     className="w-full h-40 object-contain"
                   />

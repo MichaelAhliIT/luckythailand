@@ -14,7 +14,8 @@ datasource db {
 model Product {
   id Int @id @default(autoincrement())
   category String
-  name String 
+  name String
+  engname String?
   price Float
   imageurl String
   size String?
@@ -22,4 +23,6 @@ model Product {
   volume Int?
   dimensions String?
   unit String?
+  variant String?
+  description String?
 }

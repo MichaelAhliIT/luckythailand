@@ -21,42 +21,42 @@ export const BentoGrid = () => {
               <div className="grid grid-cols-2 grid-rows-3 gap-4 items-center justify-items-center my-10 md:my-0">
                 <div>
                   <img
-                    src="/jiffy.png"
+                    src="/partners/jiffy.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
                 </div>
                 <div>
                   <img
-                    src="/pt.png"
+                    src="/partners/pt.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
                 </div>
                 <div className="row-start-2">
                   <img
-                    src="/watson.png"
+                    src="/partners/watson.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
                 </div>
                 <div className="row-start-2">
                   <img
-                    src="/makro.png"
+                    src="/partners/makro.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
                 </div>
                 <div className="row-start-3">
                   <img
-                    src="/cjexpress.png"
+                    src="/partners/cjexpress.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
                 </div>
                 <div className="row-start-3">
                   <img
-                    src="/lawson.png"
+                    src="/partners/lawson.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />

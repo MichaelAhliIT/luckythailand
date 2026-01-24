@@ -899,6 +899,7 @@ export namespace Prisma {
     id: number | null
     category: string | null
     name: string | null
+    engname: string | null
     price: number | null
     imageurl: string | null
     size: string | null
@@ -906,12 +907,15 @@ export namespace Prisma {
     volume: number | null
     dimensions: string | null
     unit: string | null
+    variant: string | null
+    description: string | null
   }
 
   export type ProductMaxAggregateOutputType = {
     id: number | null
     category: string | null
     name: string | null
+    engname: string | null
     price: number | null
     imageurl: string | null
     size: string | null
@@ -919,12 +923,15 @@ export namespace Prisma {
     volume: number | null
     dimensions: string | null
     unit: string | null
+    variant: string | null
+    description: string | null
   }
 
   export type ProductCountAggregateOutputType = {
     id: number
     category: number
     name: number
+    engname: number
     price: number
     imageurl: number
     size: number
@@ -932,6 +939,8 @@ export namespace Prisma {
     volume: number
     dimensions: number
     unit: number
+    variant: number
+    description: number
     _all: number
   }
 
@@ -954,6 +963,7 @@ export namespace Prisma {
     id?: true
     category?: true
     name?: true
+    engname?: true
     price?: true
     imageurl?: true
     size?: true
@@ -961,12 +971,15 @@ export namespace Prisma {
     volume?: true
     dimensions?: true
     unit?: true
+    variant?: true
+    description?: true
   }
 
   export type ProductMaxAggregateInputType = {
     id?: true
     category?: true
     name?: true
+    engname?: true
     price?: true
     imageurl?: true
     size?: true
@@ -974,12 +987,15 @@ export namespace Prisma {
     volume?: true
     dimensions?: true
     unit?: true
+    variant?: true
+    description?: true
   }
 
   export type ProductCountAggregateInputType = {
     id?: true
     category?: true
     name?: true
+    engname?: true
     price?: true
     imageurl?: true
     size?: true
@@ -987,6 +1003,8 @@ export namespace Prisma {
     volume?: true
     dimensions?: true
     unit?: true
+    variant?: true
+    description?: true
     _all?: true
   }
 
@@ -1080,6 +1098,7 @@ export namespace Prisma {
     id: number
     category: string
     name: string
+    engname: string | null
     price: number
     imageurl: string
     size: string | null
@@ -1087,6 +1106,8 @@ export namespace Prisma {
     volume: number | null
     dimensions: string | null
     unit: string | null
+    variant: string | null
+    description: string | null
     _count: ProductCountAggregateOutputType | null
     _avg: ProductAvgAggregateOutputType | null
     _sum: ProductSumAggregateOutputType | null
@@ -1112,6 +1133,7 @@ export namespace Prisma {
     id?: boolean
     category?: boolean
     name?: boolean
+    engname?: boolean
     price?: boolean
     imageurl?: boolean
     size?: boolean
@@ -1119,12 +1141,15 @@ export namespace Prisma {
     volume?: boolean
     dimensions?: boolean
     unit?: boolean
+    variant?: boolean
+    description?: boolean
   }, ExtArgs["result"]["product"]>
 
   export type ProductSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     category?: boolean
     name?: boolean
+    engname?: boolean
     price?: boolean
     imageurl?: boolean
     size?: boolean
@@ -1132,12 +1157,15 @@ export namespace Prisma {
     volume?: boolean
     dimensions?: boolean
     unit?: boolean
+    variant?: boolean
+    description?: boolean
   }, ExtArgs["result"]["product"]>
 
   export type ProductSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     category?: boolean
     name?: boolean
+    engname?: boolean
     price?: boolean
     imageurl?: boolean
     size?: boolean
@@ -1145,12 +1173,15 @@ export namespace Prisma {
     volume?: boolean
     dimensions?: boolean
     unit?: boolean
+    variant?: boolean
+    description?: boolean
   }, ExtArgs["result"]["product"]>
 
   export type ProductSelectScalar = {
     id?: boolean
     category?: boolean
     name?: boolean
+    engname?: boolean
     price?: boolean
     imageurl?: boolean
     size?: boolean
@@ -1158,9 +1189,11 @@ export namespace Prisma {
     volume?: boolean
     dimensions?: boolean
     unit?: boolean
+    variant?: boolean
+    description?: boolean
   }
 
-  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "category" | "name" | "price" | "imageurl" | "size" | "quantity" | "volume" | "dimensions" | "unit", ExtArgs["result"]["product"]>
+  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "category" | "name" | "engname" | "price" | "imageurl" | "size" | "quantity" | "volume" | "dimensions" | "unit" | "variant" | "description", ExtArgs["result"]["product"]>
 
   export type $ProductPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Product"
@@ -1169,6 +1202,7 @@ export namespace Prisma {
       id: number
       category: string
       name: string
+      engname: string | null
       price: number
       imageurl: string
       size: string | null
@@ -1176,6 +1210,8 @@ export namespace Prisma {
       volume: number | null
       dimensions: string | null
       unit: string | null
+      variant: string | null
+      description: string | null
     }, ExtArgs["result"]["product"]>
     composites: {}
   }
@@ -1602,6 +1638,7 @@ export namespace Prisma {
     readonly id: FieldRef<"Product", 'Int'>
     readonly category: FieldRef<"Product", 'String'>
     readonly name: FieldRef<"Product", 'String'>
+    readonly engname: FieldRef<"Product", 'String'>
     readonly price: FieldRef<"Product", 'Float'>
     readonly imageurl: FieldRef<"Product", 'String'>
     readonly size: FieldRef<"Product", 'String'>
@@ -1609,6 +1646,8 @@ export namespace Prisma {
     readonly volume: FieldRef<"Product", 'Int'>
     readonly dimensions: FieldRef<"Product", 'String'>
     readonly unit: FieldRef<"Product", 'String'>
+    readonly variant: FieldRef<"Product", 'String'>
+    readonly description: FieldRef<"Product", 'String'>
   }
     
 
@@ -1993,13 +2032,16 @@ export namespace Prisma {
     id: 'id',
     category: 'category',
     name: 'name',
+    engname: 'engname',
     price: 'price',
     imageurl: 'imageurl',
     size: 'size',
     quantity: 'quantity',
     volume: 'volume',
     dimensions: 'dimensions',
-    unit: 'unit'
+    unit: 'unit',
+    variant: 'variant',
+    description: 'description'
   };
 
   export type ProductScalarFieldEnum = (typeof ProductScalarFieldEnum)[keyof typeof ProductScalarFieldEnum]
@@ -2086,6 +2128,7 @@ export namespace Prisma {
     id?: IntFilter<"Product"> | number
     category?: StringFilter<"Product"> | string
     name?: StringFilter<"Product"> | string
+    engname?: StringNullableFilter<"Product"> | string | null
     price?: FloatFilter<"Product"> | number
     imageurl?: StringFilter<"Product"> | string
     size?: StringNullableFilter<"Product"> | string | null
@@ -2093,12 +2136,15 @@ export namespace Prisma {
     volume?: IntNullableFilter<"Product"> | number | null
     dimensions?: StringNullableFilter<"Product"> | string | null
     unit?: StringNullableFilter<"Product"> | string | null
+    variant?: StringNullableFilter<"Product"> | string | null
+    description?: StringNullableFilter<"Product"> | string | null
   }
 
   export type ProductOrderByWithRelationInput = {
     id?: SortOrder
     category?: SortOrder
     name?: SortOrder
+    engname?: SortOrderInput | SortOrder
     price?: SortOrder
     imageurl?: SortOrder
     size?: SortOrderInput | SortOrder
@@ -2106,6 +2152,8 @@ export namespace Prisma {
     volume?: SortOrderInput | SortOrder
     dimensions?: SortOrderInput | SortOrder
     unit?: SortOrderInput | SortOrder
+    variant?: SortOrderInput | SortOrder
+    description?: SortOrderInput | SortOrder
   }
 
   export type ProductWhereUniqueInput = Prisma.AtLeast<{
@@ -2115,6 +2163,7 @@ export namespace Prisma {
     NOT?: ProductWhereInput | ProductWhereInput[]
     category?: StringFilter<"Product"> | string
     name?: StringFilter<"Product"> | string
+    engname?: StringNullableFilter<"Product"> | string | null
     price?: FloatFilter<"Product"> | number
     imageurl?: StringFilter<"Product"> | string
     size?: StringNullableFilter<"Product"> | string | null
@@ -2122,12 +2171,15 @@ export namespace Prisma {
     volume?: IntNullableFilter<"Product"> | number | null
     dimensions?: StringNullableFilter<"Product"> | string | null
     unit?: StringNullableFilter<"Product"> | string | null
+    variant?: StringNullableFilter<"Product"> | string | null
+    description?: StringNullableFilter<"Product"> | string | null
   }, "id">
 
   export type ProductOrderByWithAggregationInput = {
     id?: SortOrder
     category?: SortOrder
     name?: SortOrder
+    engname?: SortOrderInput | SortOrder
     price?: SortOrder
     imageurl?: SortOrder
     size?: SortOrderInput | SortOrder
@@ -2135,6 +2187,8 @@ export namespace Prisma {
     volume?: SortOrderInput | SortOrder
     dimensions?: SortOrderInput | SortOrder
     unit?: SortOrderInput | SortOrder
+    variant?: SortOrderInput | SortOrder
+    description?: SortOrderInput | SortOrder
     _count?: ProductCountOrderByAggregateInput
     _avg?: ProductAvgOrderByAggregateInput
     _max?: ProductMaxOrderByAggregateInput
@@ -2149,6 +2203,7 @@ export namespace Prisma {
     id?: IntWithAggregatesFilter<"Product"> | number
     category?: StringWithAggregatesFilter<"Product"> | string
     name?: StringWithAggregatesFilter<"Product"> | string
+    engname?: StringNullableWithAggregatesFilter<"Product"> | string | null
     price?: FloatWithAggregatesFilter<"Product"> | number
     imageurl?: StringWithAggregatesFilter<"Product"> | string
     size?: StringNullableWithAggregatesFilter<"Product"> | string | null
@@ -2156,11 +2211,14 @@ export namespace Prisma {
     volume?: IntNullableWithAggregatesFilter<"Product"> | number | null
     dimensions?: StringNullableWithAggregatesFilter<"Product"> | string | null
     unit?: StringNullableWithAggregatesFilter<"Product"> | string | null
+    variant?: StringNullableWithAggregatesFilter<"Product"> | string | null
+    description?: StringNullableWithAggregatesFilter<"Product"> | string | null
   }
 
   export type ProductCreateInput = {
     category: string
     name: string
+    engname?: string | null
     price: number
     imageurl: string
     size?: string | null
@@ -2168,12 +2226,15 @@ export namespace Prisma {
     volume?: number | null
     dimensions?: string | null
     unit?: string | null
+    variant?: string | null
+    description?: string | null
   }
 
   export type ProductUncheckedCreateInput = {
     id?: number
     category: string
     name: string
+    engname?: string | null
     price: number
     imageurl: string
     size?: string | null
@@ -2181,11 +2242,14 @@ export namespace Prisma {
     volume?: number | null
     dimensions?: string | null
     unit?: string | null
+    variant?: string | null
+    description?: string | null
   }
 
   export type ProductUpdateInput = {
     category?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    engname?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
     imageurl?: StringFieldUpdateOperationsInput | string
     size?: NullableStringFieldUpdateOperationsInput | string | null
@@ -2193,12 +2257,15 @@ export namespace Prisma {
     volume?: NullableIntFieldUpdateOperationsInput | number | null
     dimensions?: NullableStringFieldUpdateOperationsInput | string | null
     unit?: NullableStringFieldUpdateOperationsInput | string | null
+    variant?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type ProductUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     category?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    engname?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
     imageurl?: StringFieldUpdateOperationsInput | string
     size?: NullableStringFieldUpdateOperationsInput | string | null
@@ -2206,12 +2273,15 @@ export namespace Prisma {
     volume?: NullableIntFieldUpdateOperationsInput | number | null
     dimensions?: NullableStringFieldUpdateOperationsInput | string | null
     unit?: NullableStringFieldUpdateOperationsInput | string | null
+    variant?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type ProductCreateManyInput = {
     id?: number
     category: string
     name: string
+    engname?: string | null
     price: number
     imageurl: string
     size?: string | null
@@ -2219,11 +2289,14 @@ export namespace Prisma {
     volume?: number | null
     dimensions?: string | null
     unit?: string | null
+    variant?: string | null
+    description?: string | null
   }
 
   export type ProductUpdateManyMutationInput = {
     category?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    engname?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
     imageurl?: StringFieldUpdateOperationsInput | string
     size?: NullableStringFieldUpdateOperationsInput | string | null
@@ -2231,12 +2304,15 @@ export namespace Prisma {
     volume?: NullableIntFieldUpdateOperationsInput | number | null
     dimensions?: NullableStringFieldUpdateOperationsInput | string | null
     unit?: NullableStringFieldUpdateOperationsInput | string | null
+    variant?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type ProductUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     category?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    engname?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
     imageurl?: StringFieldUpdateOperationsInput | string
     size?: NullableStringFieldUpdateOperationsInput | string | null
@@ -2244,6 +2320,8 @@ export namespace Prisma {
     volume?: NullableIntFieldUpdateOperationsInput | number | null
     dimensions?: NullableStringFieldUpdateOperationsInput | string | null
     unit?: NullableStringFieldUpdateOperationsInput | string | null
+    variant?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -2272,17 +2350,6 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type FloatFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatFilter<$PrismaModel> | number
-  }
-
   export type StringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
@@ -2296,6 +2363,17 @@ export namespace Prisma {
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     mode?: QueryMode
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type FloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
   export type IntNullableFilter<$PrismaModel = never> = {
@@ -2318,6 +2396,7 @@ export namespace Prisma {
     id?: SortOrder
     category?: SortOrder
     name?: SortOrder
+    engname?: SortOrder
     price?: SortOrder
     imageurl?: SortOrder
     size?: SortOrder
@@ -2325,6 +2404,8 @@ export namespace Prisma {
     volume?: SortOrder
     dimensions?: SortOrder
     unit?: SortOrder
+    variant?: SortOrder
+    description?: SortOrder
   }
 
   export type ProductAvgOrderByAggregateInput = {
@@ -2338,6 +2419,7 @@ export namespace Prisma {
     id?: SortOrder
     category?: SortOrder
     name?: SortOrder
+    engname?: SortOrder
     price?: SortOrder
     imageurl?: SortOrder
     size?: SortOrder
@@ -2345,12 +2427,15 @@ export namespace Prisma {
     volume?: SortOrder
     dimensions?: SortOrder
     unit?: SortOrder
+    variant?: SortOrder
+    description?: SortOrder
   }
 
   export type ProductMinOrderByAggregateInput = {
     id?: SortOrder
     category?: SortOrder
     name?: SortOrder
+    engname?: SortOrder
     price?: SortOrder
     imageurl?: SortOrder
     size?: SortOrder
@@ -2358,6 +2443,8 @@ export namespace Prisma {
     volume?: SortOrder
     dimensions?: SortOrder
     unit?: SortOrder
+    variant?: SortOrder
+    description?: SortOrder
   }
 
   export type ProductSumOrderByAggregateInput = {
@@ -2401,22 +2488,6 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
-    _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedFloatFilter<$PrismaModel>
-    _min?: NestedFloatFilter<$PrismaModel>
-    _max?: NestedFloatFilter<$PrismaModel>
-  }
-
   export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
@@ -2433,6 +2504,22 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedStringNullableFilter<$PrismaModel>
     _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
   }
 
   export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -2455,16 +2542,16 @@ export namespace Prisma {
     set?: string
   }
 
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
+  }
+
   export type FloatFieldUpdateOperationsInput = {
     set?: number
     increment?: number
     decrement?: number
     multiply?: number
     divide?: number
-  }
-
-  export type NullableStringFieldUpdateOperationsInput = {
-    set?: string | null
   }
 
   export type NullableIntFieldUpdateOperationsInput = {
@@ -2508,17 +2595,6 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type NestedFloatFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatFilter<$PrismaModel> | number
-  }
-
   export type NestedStringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
@@ -2531,6 +2607,17 @@ export namespace Prisma {
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
+  export type NestedFloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
   export type NestedIntNullableFilter<$PrismaModel = never> = {
@@ -2577,22 +2664,6 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
-    _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedFloatFilter<$PrismaModel>
-    _min?: NestedFloatFilter<$PrismaModel>
-    _max?: NestedFloatFilter<$PrismaModel>
-  }
-
   export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
@@ -2608,6 +2679,22 @@ export namespace Prisma {
     _count?: NestedIntNullableFilter<$PrismaModel>
     _min?: NestedStringNullableFilter<$PrismaModel>
     _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
   }
 
   export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
