@@ -4,10 +4,10 @@ import Link from "next/link";
 export const NewProducts = () => {
   const t = useTranslations("HomePage");
   return (
-    <div className="w-full h-full flex flex-col md:flex-row gap-5 p-10 bg-blue-100 text-black md:mt-20">
+    <div className="w-full h-full flex flex-col md:flex-row gap-5 p-10 bg-pink-50 text-red-800 md:mt-20">
       <div className="w-full md:w-1/3 flex flex-col gap-5 justify-center">
         <h1 className="text-5xl font-bold">
-          <span className="text-[#EF6795]">{t("new")}</span> {t("products")}
+          <span className="text-blue-400">{t("new")}</span> {t("products")}
         </h1>
         <p className="text-sm md:text-base">{t("newProductDesc")}</p>
       </div>

@@ -34,7 +34,7 @@ export const HomePage = () => {
             <p className="w-full md:w-3/4">{t("heroText")}</p>
           </div>
           <button
-            className="btn bg-slate-700 text-base text-secondary w-3/4 lg:w-1/2 xl:w-1/3 min-w-40 mt-5 p-6"
+            className="btn bg-red-800 text-base text-white w-3/4 lg:w-1/2 xl:w-1/3 min-w-40 mt-5 p-6"
             onClick={() => router.push("/products")}
           >
             {t("shopNow")}

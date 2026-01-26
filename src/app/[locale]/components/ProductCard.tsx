@@ -20,7 +20,7 @@ export const ProductCard = ({ title, imageurl }: CategoryCardProps) => {
   };
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-2">
       <div className="bg-base-100 border border-red-300 aspect-square relative group overflow-hidden flex items-center justify-center">
         <Image
           width={400}
@@ -40,7 +40,7 @@ export const ProductCard = ({ title, imageurl }: CategoryCardProps) => {
         </div>
       </div>
 
-      <h2 className="text-sm md:text-xl">{title}</h2>
+      <h2 className="text-sm md:text-lg">{title}</h2>
     </div>
   );
 };

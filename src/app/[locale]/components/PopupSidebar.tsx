@@ -35,7 +35,7 @@ export default function PopupSidebar({
   };
 
   return (
-    <div className="relative flex md:hidden">
+    <div className="relative flex flex-1 md:hidden">
       {/* Hamburger Menu Button */}
       <button
         onClick={toggleSidebar}

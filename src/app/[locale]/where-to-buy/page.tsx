@@ -240,7 +240,7 @@ export default function StoreLocator() {
   }
 
   return (
-    <div className="flex h-full w-full min-h-screen flex-col p-10 xl:p-20 ">
+    <div className="flex h-full w-full min-h-screen flex-col p-5 pt-12 xl:p-20 ">
       <h1 className="font-semibold text-3xl py-10">Store Locator</h1>
 
       <div className="flex flex-col-reverse xl:flex-row gap-5 xl:gap-0 w-full xl:flex-1 min-h-0">

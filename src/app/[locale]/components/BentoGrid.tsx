@@ -37,19 +37,19 @@ export const BentoGrid = () => {
                   <img
                     src="/partners/watson.png"
                     alt=""
-                    className="w-32 h-32 object-contain"
+                    className="w-36 h-36 object-contain"
                   />
                 </div>
                 <div className="row-start-2">
                   <img
                     src="/partners/makro.png"
                     alt=""
-                    className="w-32 h-32 object-contain"
+                    className="object-contain"
                   />
                 </div>
                 <div className="row-start-3">
                   <img
-                    src="/partners/cjexpress.png"
+                    src="/partners/cj.png"
                     alt=""
                     className="w-32 h-32 object-contain"
                   />
