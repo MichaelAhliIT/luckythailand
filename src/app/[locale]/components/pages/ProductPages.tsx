@@ -100,13 +100,13 @@ export const ProductPages = () => {
 
   return (
     <div className="w-full min-h-screen flex pt-14">
-      <div className="flex flex-col w-full justify-center py-10 px-5 md:px-10 gap-10">
-        <div className="flex items- justify-end">
+      <div className="flex flex-col w-full py-10 px-5 md:px-10 gap-10">
+        <div className="flex justify-end">
           {/* <h1 className="text-3xl p-3 font-bold capitalize flex-1 hidden md:flex">
               {allCategories[category] || category}
             </h1> */}
           <PopupSidebar category={category} setCategory={setCategory} />
-          <label className="flex items-center border-b gap-3 p-2 mx-5 w-1/2 md:w-1/4">
+          <label className="flex items-center border-b gap-3 p-2 w-1/2 md:w-1/4">
             <svg
               className="h-[1em] opacity-50"
               xmlns="http://www.w3.org/2000/svg"
