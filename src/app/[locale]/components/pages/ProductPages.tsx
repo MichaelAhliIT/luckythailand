@@ -213,8 +213,10 @@ export const ProductPages = () => {
           </ul>
 
           {loading ? (
-            <div className="flex justify-center w-full text-center text-lg font-semibold">
-              <span className="loading loading-spinner loading-xl"></span>
+            <div className="w-full min-h-screen grid grid-cols-2 md:grid-cols-3 gap-6">
+              {Array.from({ length: 6 }).map((_, index) => (
+                <div key={index} className="skeleton w-full h-full"></div>
+              ))}
             </div>
           ) : (
             <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-6">

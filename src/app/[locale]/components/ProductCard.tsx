@@ -40,7 +40,7 @@ export const ProductCard = ({ title, imageurl }: CategoryCardProps) => {
         </div>
       </div>
 
-      <h2 className="text-sm md:text-lg">{title}</h2>
+      <h2 className="text-sm lg:text-lg">{title}</h2>
     </div>
   );
 };
