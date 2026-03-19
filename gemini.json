@@ -1,0 +1,26 @@
+[
+    {
+        "criterion": "Includes call stack in the interactive html",
+        "human_rating": true
+    },
+    {
+        "criterion": "Includes microtask queue in the interactive html",
+        "human_rating": true
+    },
+    {
+        "criterion": "Includes macrotask queue in the interactive html",
+        "human_rating": true
+    },
+    {
+        "criterion": "Includes the flow of the task from start to end",
+        "human_rating": false
+    },
+    {
+        "criterion": "Includes draggable components in the interactive html",
+        "human_rating": true
+    },
+    {
+        "criterion": "Includes a definition of the event loop in the response",
+        "human_rating": false
+    }
+]

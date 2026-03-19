@@ -25,12 +25,14 @@ export const HomePage = () => {
   }, []);
   const viewportAmount = isMobile ? 0.3 : 0.5;
   return (
-    <div className="w-full h-full pt-14">
+    <div className="w-full h-full">
       {/* Hero section */}
-      <div className="w-full h-[calc(100vh-10vh)] flex flex-col-reverse md:flex-row mt-14 md:mt-10">
-        <div className="w-full md:w-2/5 flex flex-col justify-center p-10 md:pl-28">
+      <div className="w-full flex flex-col-reverse md:flex-row md:min-h-screen mt-20 md:mt-0">
+        <div className="w-full md:w-1/2 flex flex-col justify-center px-6 py-8 md:p-10 md:pl-28">
           <div className="flex flex-col gap-5">
-            <h1 className="text-6xl font-bold text-red-700">Lucky Thailand</h1>
+            <h1 className="text-5xl md:text-6xl font-bold text-red-700 leading-none">
+              Lucky Thailand
+            </h1>
             <p className="w-full md:w-3/4">{t("heroText")}</p>
           </div>
           <button
@@ -40,14 +42,16 @@ export const HomePage = () => {
             {t("shopNow")}
           </button>
         </div>
-        <div className="w-full md:w-3/5 md:p-10 flex items-center justify-center">
-          <Image
-            width={1000}
-            height={1000}
-            src="/luckyproducts.png"
-            alt=""
-            className="w-full object-cover aspect-auto"
-          />
+
+        <div className="relative w-full md:w-1/2 h-[320px] md:h-auto md:min-h-[400px] flex items-end md:items-center justify-center">
+          <div className="relative w-full max-w-xl h-full">
+            <Image
+              fill
+              src="/homepageBanner.png"
+              alt="homepage banner"
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
       {/* <div className="w-full h-[300px] md:h-[600px] bg-[url(/heroImage.jpg)] bg-cover flex items-center px-10 opacity-105">
@@ -105,12 +109,12 @@ export const HomePage = () => {
           <CategoryCard
             title="Lucky Clean"
             desc={t("cleanText")}
-            imageurl="/clean.webp"
+            imageurl="/luckycleanBanner.png"
           />
           <CategoryCard
             title="Lucky Care"
             desc={t("careText")}
-            imageurl="/care.webp"
+            imageurl="/luckycareBanner.png"
           />
         </div>
       </motion.div>

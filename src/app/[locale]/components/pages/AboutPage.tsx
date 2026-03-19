@@ -21,7 +21,7 @@ export const AboutPage = () => {
           <div className="m-5 mb-0 sm:m-0">
             <img
               className="rounded-xl sm:rounded-none aspect-video sm:aspect-auto"
-              src="/clean.webp"
+              src="/aboutHero.png"
               alt=""
             />
           </div>

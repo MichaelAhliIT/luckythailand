@@ -36,7 +36,7 @@ export const Mission = ({ colorMode }: MissionProps) => {
         {[...Array(4)].map((_, i) => (
           <img
             key={i}
-            src="/care.webp"
+            src={`/mission${i + 1}.png`}
             alt=""
             className="w-full rounded-xl object-cover"
           />
@@ -60,7 +60,7 @@ export const Mission = ({ colorMode }: MissionProps) => {
         </div>
         <div className="w-full md:w-1/2">
           <img
-            src="/clean.webp"
+            src="/vision.png"
             alt=""
             className="w-full h-60 md:h-80 object-cover rounded-2xl"
           />

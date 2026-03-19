@@ -29,7 +29,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-white/95 shadow-sm text-secondary-content fixed z-20">
+    <div className="navbar fixed top-0 left-0 w-full bg-white/95 shadow-sm text-secondary-content z-20">
       <div className="navbar-start">
         <a className="px-3 md:px-5 text-xl font-bold">LUCKY</a>
       </div>

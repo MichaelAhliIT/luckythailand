@@ -153,63 +153,6 @@ export const ProductPages = () => {
                 <div>{allCategories[key]}</div>
               </li>
             ))}
-            {/* <li className="p-4 tracking-wide bg-error-content text-base-100 text-lg font-extrabold  ">
-            Lucky Clean
-          </li>
-
-          {Object.keys(luckyCleanCategory).map((key) => (
-            <li
-              key={key}
-              className={`list-row cursor-pointer rounded-none ${
-                category === key
-                  ? "bg-secondary text-red-900"
-                  : "hover:bg-secondary/30"
-              }`}
-              onClick={() => setCategory(key)}
-            >
-              <div>{luckyCleanCategory[key]}</div>
-            </li>
-          ))}
-          
-          <li className="p-4 tracking-wide bg-error-content text-base-100 text-lg font-extrabold  ">
-            Lucky Care
-          </li>
-
-          {Object.keys(luckyCareCategory).map((key) => (
-            <li
-              key={key}
-              className={`list-row cursor-pointer rounded-none ${
-                category === key
-                  ? "bg-secondary text-red-900"
-                  : "hover:bg-secondary/30"
-              }`}
-              onClick={() => setCategory(key)}
-            >
-              <div>{luckyCareCategory[key]}</div>
-            </li>
-          ))} */}
-
-            {/* <li className="p-4 tracking-wide bg-error-content text-base-100 text-lg font-extrabold">
-            PROMO
-          </li>
-          <li
-            className="list-row cursor-pointer hover:bg-secondary rounded-none"
-            onClick={() => setCategory("promo1")}
-          >
-            <div>Buy 1 Get 1</div>
-          </li>
-          <li
-            className="list-row cursor-pointer hover:bg-secondary rounded-none"
-            onClick={() => setCategory("promo2")}
-          >
-            <div>Up To 40%</div>
-          </li>
-          <li
-            className="list-row cursor-pointer hover:bg-secondary rounded-none"
-            onClick={() => setCategory("promo3")}
-          >
-            <div>New Arrival</div>
-          </li> */}
           </ul>
 
           {loading ? (
