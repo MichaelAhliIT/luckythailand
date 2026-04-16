@@ -12,7 +12,8 @@
     "format:write": "prettier . --write",
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm run lint && npm run format",
-    "postinstall": "prisma generate && prisma migrate deploy"
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
